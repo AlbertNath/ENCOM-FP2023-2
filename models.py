@@ -10,17 +10,23 @@ class administrador(models.Model):
 class c_tipo_platillo(models.Model):
     id_tipo_platillo = models.AutoField(primary_key=True)
     descripcion = models.CharField(max_length=300)
+    def __str__(self):
+        return self.descripcion
 
     
 class c_ubicacion(models.Model):
     id_ubicacion = models.AutoField(primary_key=True)
     descripcion = models.CharField(max_length=300)
+    def __str__(self):
+        return self.descripcion
     
 class tableta(models.Model):
     id_tableta = models.AutoField(primary_key=True)
     id_ubicacion = models.ForeignKey(c_ubicacion, on_delete=models.CASCADE)
-    numero_mesa = models.CharField(max_length=50)
+    numero_mesa = models.IntegerField(default=0)
     ubicacion = models.CharField(max_length=50)
+    def __str__(self):
+        return self.id_tableta
 
 class platillo(models.Model):
     id_platillo = models.AutoField(primary_key=True)
@@ -29,6 +35,8 @@ class platillo(models.Model):
     descrpcion = models.CharField(max_length=300)
     precio = models.CharField(max_length=50)
     imagen = models.CharField(max_length=50)
+    def __str__(self):
+        return self.descrpcion
     
 class orden(models.Model):
     id_orden = models.AutoField(primary_key=True)
@@ -37,5 +45,6 @@ class orden(models.Model):
     id_tipo_platillo = models.ForeignKey(c_tipo_platillo, on_delete=models.CASCADE)
     id_admin = models.ForeignKey(administrador, on_delete=models.CASCADE)
     id_platillo = models.ForeignKey(platillo, on_delete=models.CASCADE)
-    numero_mesa = models.CharField(max_length=50)
-    
+    numero_mesa = models.IntegerField(default=0)
+    def __str__(self):
+        return self.id_orden
