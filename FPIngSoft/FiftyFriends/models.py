@@ -21,10 +21,39 @@ class c_ubicacion(models.Model):
         return self.descripcion
     
 class tableta(models.Model):
+    from enum import Enum
+
+    class UbicacionMesa(Enum):
+        TERRAZA        = 1
+        BALCON         = 2
+        JARDIN         = 3
+        COMEDORCENTRAL = 4
+
     id_tableta = models.AutoField(primary_key=True)
     id_ubicacion = models.ForeignKey(c_ubicacion, on_delete=models.CASCADE)
     numero_mesa = models.IntegerField(default=0)
     ubicacion = models.CharField(max_length=50)
+
+    # def __init__(self, numero, ubicacion) -> None:
+    #     self.numero = numero
+    #     self.ubicacion = ubicacion
+
+    @property
+    def getNumero(self):
+        return self.numero_mesa
+
+    @property
+    def setNumero(self, num: int):
+        self.numero_mesa = num
+
+    @property
+    def getUbicacion(self):
+        return self.ubicacion
+
+    @property
+    def setUbicacion(self, loc) -> None:
+        self.ubicacion = loc
+
     def __str__(self):
         return self.id_tableta
 
