@@ -1,4 +1,5 @@
 from django.db import models
+from typing import Dict
 
 class administrador(models.Model):
     id_administrador = models.AutoField(primary_key=True)
@@ -75,5 +76,21 @@ class orden(models.Model):
     id_admin = models.ForeignKey(administrador, on_delete=models.CASCADE)
     id_platillo = models.ForeignKey(platillo, on_delete=models.CASCADE)
     numero_mesa = models.IntegerField(default=0)
+
+    # platillos
+    _platillos: Dict[platillo, int] = {}
+    _enviado: bool = False
+
+    def agregarPlatillo(self, platillo, cantidad) -> None:
+        # Esto parece tener sentido y ninguno a la vez :b
+        # Debe ser muchos a muchos? En cuyo caso:
+        # platillos_assoc = self.platillos.all().values('id_tipo_platillo')
+        # categoria = []
+        # for q in platilos_assoc:
+        #   categoria.append(c_tipo_platillo.objects.filter(q['id_tipo_platillo']))
+        #self.objects.filter(platillo.objects.filter(self.id_platillo))
+        self._platillos.update({platillo: cantidad})
+
+
     def __str__(self):
         return self.id_orden
