@@ -74,7 +74,8 @@ class orden(models.Model):
     id_ubicacion = models.ForeignKey(c_ubicacion, on_delete=models.CASCADE)
     id_tipo_platillo = models.ForeignKey(c_tipo_platillo, on_delete=models.CASCADE)
     id_admin = models.ForeignKey(administrador, on_delete=models.CASCADE)
-    id_platillo = models.ForeignKey(platillo, on_delete=models.CASCADE)
+    id_platillo = models.ManyToManyField(platillo)
+
     numero_mesa = models.IntegerField(default=0)
 
     # platillos
