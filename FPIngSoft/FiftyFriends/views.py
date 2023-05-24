@@ -77,16 +77,19 @@ def eliminarPlatillo(request, pk, template_name='books_pc_multi_view2platillo_fo
 class Carrito(View):
     def get(self, request, *args, **kwargs):
         orden_act = orden.objects.filter(id_orden=0)
+        # id_platillos = orden_act.id_platillo.all()
+        # platillos_totales = []
+        # total = 0.0
+        # for i in id_platillos:
+        #     p = platillo.objects.filter(id=i)
+        #     platillos_totales.append(p)
+        #     total += float(p.precio)
 
-        id_platillos = orden_act.id_platillo.all()
-        platillos_totales = []
-        total = 0.0
-        for i in id_platillos:
-            p = platillo.objects.filter(id=i)
-            platillos_totales.append(p)
-            total += p.precio
+        # ctxt = {
+        #     'platillos': platillos_totales
+        # }
+        return render(request, 'carrito.html', {})
 
-        ctxt = {
-            'platillos': platillos_totales
-        }
-        return render(request, 'carrito.html', ctxt)
+    def confirmar(request, platillo_id=0):
+        print(platillo_id)
+        return redirect('../../admin')

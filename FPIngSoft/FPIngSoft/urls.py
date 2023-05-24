@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from FiftyFriends.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='admin'),
+    #path('', Login.as_view(), name='login'),
+    #path('tableta/', LoginTableta.as_view(), name='tableta'),
+    #path('home/', Home.as_view(), name='home'),
+    #path('home/<int:c_tipo_platillo>/', redir_seccion),
+    #path('home/<int:platillo>/', vista_platillo),
+    #path('votacion/', Votacion.as_view(), name='votacion'),
+    #path('votacion/resultados', VotacionResult.as_view(), name='votacion'),
+    #path('votacion/respuestas', VotacionResp.as_view(), name='votacion'),
+    path('carrito/', Carrito.as_view(), name='carrito'),
+    path('carrito/<int:platillo_id>/', Carrito.confirmar, name='confirmar')
 ]
