@@ -8,13 +8,13 @@ class Login(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'login.html')
 
-# Esto quizás debería ir por separado?
-def iniciarSecion(request, nombre_usuario,contrasenia, template_name='books_pc_multi_view2/login.html'):
-    admin = get_object_or_404(administrador, nombre_usuario = nombre_usuario ,contrasenia = contrasenia)
-    ctx = {
-        'admin': admin,
-    }
-    return render(request, template_name, ctx)
+    # Esto quizás debería ir por separado?
+    def iniciarSecion(request, nombre_usuario,contrasenia, template_name='books_pc_multi_view2/login.html'):
+        admin = get_object_or_404(administrador, nombre_usuario = nombre_usuario ,contrasenia = contrasenia)
+        ctx = {
+            'admin': admin,
+        }
+        return render(request, template_name, ctx)
 
 # ========== platillo CRUD=========3
 class Platillos(View):
@@ -77,19 +77,19 @@ def eliminarPlatillo(request, pk, template_name='books_pc_multi_view2platillo_fo
 class Carrito(View):
     def get(self, request, *args, **kwargs):
         orden_act = orden.objects.filter(id_orden=0)
-        # id_platillos = orden_act.id_platillo.all()
-        # platillos_totales = []
-        # total = 0.0
-        # for i in id_platillos:
-        #     p = platillo.objects.filter(id=i)
-        #     platillos_totales.append(p)
-        #     total += float(p.precio)
+        id_platillos = orden_act.values('id_platillos')
+        platillos_totales = []
+        total = 0.0
+        for i in id_platillos:
+            p = platillo.objects.filter(id=i)
+            platillos_totales.append(p)
+            total += float(p.precio)
 
-        # ctxt = {
-        #     'platillos': platillos_totales
-        # }
+        ctxt = {
+            'platillos': platillos_totales
+        }
         return render(request, 'carrito.html', {})
 
-    def confirmar(request, platillo_id=0):
+    def confirmar(request, platillo_id=0, id_aux=0):
         print(platillo_id)
         return redirect('../../admin')
