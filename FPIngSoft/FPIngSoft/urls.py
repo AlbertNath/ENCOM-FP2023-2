@@ -19,7 +19,7 @@ from FiftyFriends.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    #path('', Login.as_view(), name='login'),
+    path('', home, name='home'),
     #path('tableta/', LoginTableta.as_view(), name='tableta'),
     #path('home/', Home.as_view(), name='home'),
     #path('home/<int:c_tipo_platillo>/', redir_seccion),
@@ -27,6 +27,5 @@ urlpatterns = [
     #path('votacion/', Votacion.as_view(), name='votacion'),
     #path('votacion/resultados', VotacionResult.as_view(), name='votacion'),
     #path('votacion/respuestas', VotacionResp.as_view(), name='votacion'),
-    path('carrito/', Carrito.as_view(), name='carrito'),
-    path('carrito/<int:platillo_id>/<int:id_aux>/', Carrito.confirmar, name='confirmar')
+    path('carrito/', mostrarCarrito, name='carrito'),
 ]
