@@ -28,4 +28,5 @@ urlpatterns = [
     #path('votacion/resultados', VotacionResult.as_view(), name='votacion'),
     #path('votacion/respuestas', VotacionResp.as_view(), name='votacion'),
     path('carrito/', Carrito.as_view(), name='carrito'),
+    path('carrito/<int:id>/', Carrito.eliminar_platillo, name='eliminarPlatillo')
 ]

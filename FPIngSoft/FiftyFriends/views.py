@@ -105,5 +105,13 @@ class Carrito(View):
         }
         return render(request, 'carrito.html', ctxt)
 
+    def eliminar_platillo(request, id):
+        carrito = orden.objects.filter(id_orden=1)[0]
+        p = platillo.objects.filter(id_platillo=int(id))
+        carrito.id_platillos.remove(p[0].id_platillo)
+
+        return redirect('carrito')
+
+
 def home(request):
     return render(request, 'home.html', {})
