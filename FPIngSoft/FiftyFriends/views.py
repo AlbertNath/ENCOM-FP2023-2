@@ -114,4 +114,4 @@ class Carrito(View):
 
 
 def home(request):
-    return render(request, 'Inicio.html', {})
+    return render(request, 'home.html', {})
