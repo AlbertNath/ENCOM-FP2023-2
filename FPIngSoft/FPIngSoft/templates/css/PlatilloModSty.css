@@ -4,10 +4,11 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 .img-platillo{
     width:35px; 
-    margin-left: 20px;
+    left: 250px;
 }
 .Imagen{
     width:70px;
@@ -17,11 +18,29 @@ body{
     position: relative; 
     z-index: 1;
 }
+
+.choseImagen{
+    width:180px;
+    height: 180px;
+    top: 17em;
+    left: 720px;
+    position: relative; 
+    z-index: 1;
+}
+
 .ImagenUno{
-    width:300px;
-    height: 300px;
-    top: 15em;
-    left: 250px;;
+    width:180px;
+    height: 180px;
+    top: 18em;
+    left: 200px;
+    position: relative; 
+    z-index: 1;
+}
+.ImagenDos{
+    width:140px;
+    height: 140px;
+    top: 26em;
+    left: 250px;
     position: relative; 
     z-index: 1;
 }
@@ -29,6 +48,10 @@ body{
 .navbar-comensal{
     background-color: #970101;
 }
+
+textarea {
+    resize: none;
+  }
 
 .nav-link-redbar{
     color: #faf1e2e0;
@@ -57,7 +80,7 @@ body{
     position: absolute;
     left: 68.98%;
     right: 35.18%;
-    top: 75.62%;
+    top: 76.62%;
     bottom: 25.41%;
     color :#970101;
 }
@@ -79,7 +102,7 @@ body{
     position: absolute;
     left: 48.98%;
     right: 35.18%;
-    top: 75.62%;;
+    top: 76.62%;
     bottom: 25.41%;
     color :white;
 }
@@ -111,7 +134,7 @@ p.Contenido{
     width: 550px;
     height: 180px;
     left: 580px;
-    top: 280px;
+    top: 220px;
 }
 
 .card-text{
@@ -119,8 +142,8 @@ p.Contenido{
     position: absolute;
     width: 500px;
     height: 130px;
-    left: 580px;
-    top: 300px;
+    left: 500px;
+    top: 250px;
     color: #63574f;
 }
 
@@ -129,8 +152,8 @@ p.Contenido{
     position: absolute;
     width: 200px;
     height: 20px;
-    left: 670px;
-    top: 452px;
+    left: 600px;
+    top: 402px;
     color: #63574f;
 }
 
@@ -140,7 +163,7 @@ p.Contenido{
     width: 400px;
     height: 20px;
     left: 700px;
-    top: 250px;
+    top: 180px;
     color: #63574f;
 }
 
@@ -148,8 +171,8 @@ p.Contenido2{
     position: absolute;
     width: 550px;
     height: 180px;
-    left: 580px;
-    top: 450px;
+    left: 500px;
+    top: 400px;
 }
 
 p.Contenido3{
@@ -157,7 +180,7 @@ p.Contenido3{
     width: 550px;
     height: 180px;
     left: 580px;
-    top: 250px;
+    top: 180px;
 }
 
 .container-sm{
@@ -182,5 +205,83 @@ p.Contenido3{
     border-radius: 20px;
 }
 
+.label1{
+    font-family: 'Roboto' , cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left:  30.81%;
+    right: 35.18%;
+    top: 32.62%;
+    bottom: 25.41%;
+    color: #6E2C00;
 
-   
+}
+
+.label2{
+    font-family: 'Roboto' , cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left:  55.81%;
+    right: 30.18%;
+    top: 32.62%;
+    bottom: 25.41%;
+    color: #6E2C00;;
+}
+
+.label3{
+    font-family: 'Roboto' , cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left:  30.81%;
+    right: 35.18%;
+    top: 44.62%;
+    bottom: 25.41%;
+    color: #6E2C00;
+}
+
+.label4{
+    font-family: 'Roboto' , cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left:  55.81%;
+    right: 35.18%;
+    top: 44.62%;
+    bottom: 25.41%;
+    color: #6E2C00;
+}
+
+.label5{
+    font-family: 'Roboto' , cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left:  55.81%;
+    right: 35.18%;
+    top: 56.62%;
+    bottom: 25.41%;
+    color: #6E2C00;   
+}
