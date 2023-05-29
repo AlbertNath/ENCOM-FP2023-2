@@ -76,37 +76,34 @@ def eliminarPlatillo(request, pk, template_name='books_pc_multi_view2platillo_fo
     return render(request, template_name, ctx)
 
 
-def mostrarCarrito(request, *args, **kwargs):
-    if request.method == "POST":
+class Carrito(View):
+    def get(self, request, *args, **kwargs):
+        orden_act = orden.objects.filter(id_orden=1)[0]
+
+        platillos = orden_act.id_platillos.all()
+        total = 0.0
+        for i in platillos:
+            total += float(i.precio)
+
+        ctxt = {
+            'platillos': platillos,
+            'total': total,
+        }
+
+        return render(request, 'carrito.html', ctxt)
+
+    def post(self, request, *args, **kwargs):
         print('POST request reached')
         form = NameForm(request.POST)
 
         cantidades = request.POST.getlist('cantidad[]')
-        # print('==========================')
-        # print({'form': form, 'success': True})
-        # print('==========================')
+        print(cantidades)
 
-        return render(request, 'carrito.html', {'form': form, 'success': True})
-    else:
-        form = NameForm()
-
-    orden_act = orden.objects.filter(id_orden=0)
-    id_platillos = orden_act.values('id_platillos')
-    platillos_totales = []
-    total = 0.0
-    for i in id_platillos:
-        p = platillo.objects.filter(id=i)
-        platillos_totales.append(p)
-        total += float(p.precio)
-
-    ctxt = {
-        'platillos': platillos_totales,
-        'form': form
-    }
-    return render(request, 'carrito.html', ctxt)
-
-def confirmarCarrito(request, ok=''):
-    return render(request, 'base.html')
+        ctxt = {
+            'form': form,
+            'success': True
+        }
+        return render(request, 'carrito.html', ctxt)
 
 def home(request):
-    return render(request, 'base.html', {})
+    return render(request, 'home.html', {})

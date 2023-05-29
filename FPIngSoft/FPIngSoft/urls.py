@@ -27,5 +27,5 @@ urlpatterns = [
     #path('votacion/', Votacion.as_view(), name='votacion'),
     #path('votacion/resultados', VotacionResult.as_view(), name='votacion'),
     #path('votacion/respuestas', VotacionResp.as_view(), name='votacion'),
-    path('carrito/', mostrarCarrito, name='carrito'),
+    path('carrito/', Carrito.as_view(), name='carrito'),
 ]

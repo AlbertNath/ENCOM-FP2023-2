@@ -56,7 +56,7 @@ class tableta(models.Model):
         self.ubicacion = loc
 
     def __str__(self):
-        return self.id_tableta
+        return str(self.id_tableta)
 
 class platillo(models.Model):
     id_platillo = models.AutoField(primary_key=True)
@@ -64,7 +64,7 @@ class platillo(models.Model):
     id_tipo_platillo = models.ForeignKey(c_tipo_platillo, on_delete=models.CASCADE)
     descrpcion = models.CharField(max_length=300)
     precio = models.CharField(max_length=50)
-    imagen = models.CharField(max_length=50)
+    imagen = models.TextField()
     def __str__(self):
         return self.descrpcion
     
@@ -94,4 +94,4 @@ class orden(models.Model):
 
 
     def __str__(self):
-        return self.id_orden
+        return str(self.id_orden)
