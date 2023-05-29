@@ -1,0 +1,100 @@
+
+body{
+    background-color : #FFE3B8;
+    background-image: url('../img/bg2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.img-platillo{
+    width:35px; 
+    left: 250px;
+}
+.navbar-comensal{
+    background-color: #970101;
+}
+.nav-link-redbar{
+    color: #faf1e2e0;
+}
+
+.navbar-nav .nav-link:hover {
+    /* Add your hover styles here */
+    color: white;
+    /* Example: change the color to red on hover */
+}
+
+h1.Titulo{
+    font-family: 'Sigmar One';
+    font-style: normal;
+    font-size: 120px;
+    line-height: 16px;
+    top: 3.5em;
+    text-align: center;
+    position: absolute;
+    width: 550px;
+    height: 180px;
+    left: 200px;
+    top: 190px;
+}
+
+h1.Titulo2{
+    font-family: 'Sigmar One';
+    font-style: normal;
+    font-size: 120px;
+    line-height: 16px;
+    top: 3.5em;
+    text-align: center;
+    position: absolute;
+    width: 380px;
+    height: 150px;
+    left: 80px;
+    top: 300px;
+}
+
+
+h1.Titulo3{
+    font-family: 'Sigmar One';
+    font-style: normal;
+    font-size: 120px;
+    line-height: 16px;
+    top: 3.5em;
+    text-align: center;
+    position: absolute;
+    width: 380px;
+    height: 150px;
+    left: 200px;
+    top: 400px;
+}
+
+p.parrafo{
+    font-family: 'Salsa';
+    font-style: normal;
+    font-size: 35px;
+    position: absolute;
+    height: 150px;
+    left: 220px;
+    top: 480px;
+}
+
+img.ImagenDos{
+    width:350px;
+    height: 190px;
+    top: 17.5em;
+    left: 800px;;
+    position: relative; 
+    z-index: 1;   
+}
+
+
+img.ImagenUno{
+    width:120px;
+    height: 120px;
+    top: 0em;
+    left: 80px;
+    position: relative; 
+    z-index: 1;  
+}
+
+
+
