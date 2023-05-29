@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sigmar&display=swap" rel="stylesheet">
+  <title>Carrito</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link href="css/carrito.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/navbar-comensal.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-comensal">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo50amigos.svg" class="img-fluid img-platillo" alt="encom">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link nav-link-redbar" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-redbar" href="entradas-comensal.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-redbar active" href="carrito.html" style="color: white;">Orden</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+  <div class="container-sm" style="background-color: #FEF3E4; margin-top: 70px;">
+    <br>
+    <div class="row">
+      <h1>Carrito</h1>
+    </div>
+    <br>
+    <div class="row">
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col" class="tituloCol" style="background-color: #ffd89d6f;">Platillo</th>
+            <th scope="col" style="background-color: #ffd89d6f;"></th>
+            <th scope="col" class="tituloCol">Precio</th>
+            <th scope="col" class="tituloCol">Cantidad</th>
+            <th scope="col" class="tituloCol">Total</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="background-color: #ffd89d6f;">img</td>
+            <td style="background-color: #ffd89d6f;">nombre del platillo</td>
+            <td>precio</td>
+            <td>cantidad</td>
+            <td>total</td>
+            <td><a href="#" class="btn"><img src="img/delete.svg" alt="Eliminar" class="icon"></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="container-sm" style="background-color: #FFD494;">
+        <br>
+        <button type="button" class="btn btn-outline-dark">Agregar platillo +</button>
+        <br>
+        <div class="container-sm" style="text-align: right;">
+          Total: $0.00
+          <br>
+          <button type="button" class="btn btn-outline-dark" style="background-color: orange;" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Confirmar orden
+          </button>
+        </div>
+        <br>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #FFE3B8;">
+          <div class="modal-header" style="border-color: #EBC68F;">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              ¡Tu orden fue realizada con éxito!</h1>
+          </div>
+          <div class="modal-body" style="border-color: #EBC68F;">
+            ¿Deseas iniciar la votación de helados?
+          </div>
+          <div class="modal-footer" style="border-color: #EBC68F;">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+              style="background-color: #E86A0E;">Quiero votar</button>
+            <button type="button" class="btn btn-primary" style="background-color: #970101;">En otro momento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

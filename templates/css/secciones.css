@@ -1,0 +1,88 @@
+.cont-grande {
+    background-color: #ffe3b828;
+}
+
+.cont-img-titulo {
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 80px;
+}
+
+.img-titulo {
+    height: 80px;
+}
+
+.btng-secciones {
+    padding-right: 100px;
+}
+
+.btn-active-sec {
+    background-color: #D3550B;
+}
+
+.btn-inactive-sec {
+    color: black;
+}
+
+.cont-cards {
+    padding: 20px;
+}
+
+.card-s {
+    width: 18rem;
+}
+
+.img-card {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.texto-card {
+    height: 140px;
+    text-align: justify;
+}
+
+
+.nav-pills .nav-link.active:hover {
+    color: black;
+    /* Hover color for the active link */
+}
+
+.nav-pills .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.132);
+    color: #D3550B;
+}
+
+.card-btn-2 {
+    background-color: transparent;
+    border: 2px solid #D3550B;
+    color: #D3550B;
+}
+
+.card-btn-2:hover {
+    background-color: #D3550B;
+    color: white;
+}
+
+.card-btn {
+    background-color: transparent;
+    border: 2px solid #970101;
+    color: #970101;
+}
+
+.card-btn:hover {
+    background-color: #970101;
+    color: white;
+}
+
+.btn-nuevo {
+    background-color: transparent;
+    border: 2px solid #6D2C02;
+    color: #6D2C02;
+    margin: 20px;
+}
+
+.btn-nuevo:hover {
+    background-color: #6D2C02;
+    color: white;
+}

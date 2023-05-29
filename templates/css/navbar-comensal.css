@@ -1,0 +1,18 @@
+.navbar-comensal{
+    background-color: #970101;
+}
+
+.img-platillo{
+    width:35px; 
+    margin-left: 20px;
+}
+
+.nav-link-redbar{
+    color: #faf1e2e0;
+}
+
+.navbar-nav .nav-link:hover {
+    /* Add your hover styles here */
+    color: white;
+    /* Example: change the color to red on hover */
+}

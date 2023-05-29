@@ -1,0 +1,114 @@
+
+
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.btn-primary{
+    background: #970101;
+    border-radius: 15px;
+    height: 70px;
+    width: 190px;
+    left: 262px;
+    top: 313px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    border-radius: 15px;
+    position: absolute;
+    left: 42.81%;
+    right: 35.18%;
+    top: 62.62%;
+    bottom: 25.41%;
+}
+
+.btn-secondary{
+    background: #970101;
+    border-radius: 15px;
+    height: 70px;
+    width: 190px;
+    left: 259px;
+    top: 313px;
+    border-radius: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    border-radius: 15px; 
+    position: absolute;
+    left: 42.81%;
+    right: 35.18%;
+    top: 75.62%;
+    bottom: 25.41%;
+}
+
+body {
+    background-image: url("../img/Fondo2.png");
+    background-repeat: no-repeat;
+    background-size:  100% 121%;
+}
+
+h1.Titulo{
+    font-family: 'Sigmar One';
+    font-style: normal;
+    font-size: 95px;
+    line-height: 16px;
+    top: 3.5em;
+    text-align: center;
+}
+
+h3.SubTitulo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 16px;
+    text-align: center;
+    left: 352px;
+    top: -11cm;
+    border-radius: 0px;
+}
+  
+/*Imagenes*/
+
+img.ImagenUno{
+    width:200px;
+    height: 170px;
+    top: 6.5em;
+    left: -30px;;
+    position: relative; 
+    z-index: 1;  
+}
+
+img.ImagenDos{
+    width:230px;
+    height: 130px;
+    top: 1.5em;
+    left: 400px;;
+    position: relative; 
+    z-index: 1;  
+}
+
+img.ImagenTres{
+    width:80px;
+    height: 80px;
+    top: 1.7em;
+    left: 330px;
+    position: relative; 
+    z-index: 1;   
+}
+
+img.ImagenCuatro{
+    width: 100px;
+    height: 100px;
+    top: 1.7em;
+    left: 320px;;
+    position: relative; 
+    z-index: 1;  
+}
