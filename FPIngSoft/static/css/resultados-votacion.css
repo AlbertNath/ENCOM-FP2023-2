@@ -1,0 +1,24 @@
+.btn-cerrar{
+    width: 40%;;
+    background-color: transparent;
+    border: 2px solid #970101;
+    color: #970101;
+    margin: 5px;
+}
+.btn-terminar{
+    width: 40%;
+    background-color: transparent;
+    border: 2px solid #D35400;
+    color: #D35400;
+    margin: 5px;
+}
+
+.btn-cerrar:hover{
+    background-color: #970101;
+    color: white;
+}
+.btn-terminar:hover{
+    background-color: #D35400;
+    color: white;
+    
+}
