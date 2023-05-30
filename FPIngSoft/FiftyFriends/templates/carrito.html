@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block htmlhead %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"> 
+    <title>Carrito</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/carrito.css' %}">      
 {% endblock htmlhead %}
 {% block content %}
+{% include 'navbar.html' %}
   <div class="container-sm" style="background-color: #FEF3E4; margin-top: 70px;">
     <br>
     <form method="POST" >
@@ -39,7 +40,7 @@
             </td>
             <td>total</td>
             <td><a href="{% url 'eliminarPlatillo' p.id_platillo %}"
-                   class="btn"><img src="img/delete.svg" alt="Eliminar" class="icon"></a></td>
+                   class="btn"><img src="{% static 'img/delete.svg' %}" alt="Eliminar" class="icon"></a></td>
           </tr>
           {% endfor %}
         </tbody>

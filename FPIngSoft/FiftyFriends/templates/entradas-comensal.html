@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block htmlhead %}
+    <title>Entradas</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/secciones.css' %}">      
+{% endblock htmlhead %}
 {% block content %}
+{% include 'navbar.html' %}
     <div class="container-sm cont-img-titulo">
         <div class="row">
-            <img src="img/entradas-title.svg" class="card-img-top img-titulo" alt="...">
+            <img src="{% static 'img/entradas-title.svg' %}" class="card-img-top img-titulo" alt="...">
         </div>
     </div>
 
@@ -24,28 +29,27 @@
             </li>
         </ul>
 
-        {% for p in platillos %}
         <div class="container-sm cont-cards">
-            <div class="row flex-wrap justify-content-start">
-                <div class="col-md-4">
-                    <div class="card custom-card card-s rounded">
-                        <img src="img/enchiladas.jpeg" class="card-img-top img-card" alt="...">
+            <div class="row flex-nowrap overflow-auto">
+                {% for p in platillos %}
+                <div class="col" style="padding-top: 20px;">
+                    <div class="card card-s rounded">
+                        <img src="{{ p.imagen }}" class="card-img-top img-card" alt="...">
                         <div class="card-body" style="background-color: #e9981fcd;">
                             <h5 class="card-title">{{ p.descrpcion }}</h5>
+                            <p>{{ p.precio }}"</p>
                             <p class="card-text overflow-auto texto-card">
-                                <img src="{{ p.imagen }}" alt="" />
+                                Descripción
                             </p>
                             <div class="container-sm" style="text-align: right;">
                                 <a href="#" class="btn card-btn">Ver platillo</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <!-- Add more cards as needed -->
+                {% endfor %}
             </div>
         </div>
-        {% endfor %}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block htmlhead %}
+    <title>50Amigos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/PantallaInicio.css' %}">      
+{% endblock htmlhead %}
 {% block content %}
+{% include 'navbar.html' %}
 <div class="container-sm">
     <div class="row">
         <h1 class="Titulo"> Bienvenidos</h1>
@@ -14,7 +19,7 @@
         </p>
     </div>
     <div class="row">
-        <img class="ImagenDos" src="img/Cuchara2.png"  alt="">
+        <img class="ImagenDos" src="{% static 'img/Cuchara2.png' %}"  alt="">
     </div>
 </div>
 {% endblock content %}
