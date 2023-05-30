@@ -1,0 +1,13 @@
+.img-navbar{
+    width:50px; 
+    margin-left: 10px;
+}
+
+.img-offcanv{
+    width:110px; 
+    margin-left: 30%;
+}
+
+.cerrar-sesion:hover{
+    color:red;
+}

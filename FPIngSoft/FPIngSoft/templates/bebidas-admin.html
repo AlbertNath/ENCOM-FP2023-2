@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Helados</title>
+    <title>Entradas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sigmar&display=swap" rel="stylesheet">
@@ -12,53 +12,63 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/secciones.css" rel="stylesheet" />
-    <link href="css/navbar-comensal.css" rel="stylesheet" />
+    <link href="css/navbar-admin.css" rel="stylesheet" />
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #970101;">
+    <nav class="navbar fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo50amigos.svg" class="img-fluid img-platillo" alt="encom">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo50amigos.svg" class="img-fluid img-navbar" alt="encom">
             </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ">
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-redbar" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-redbar active" href="entradas-comensal.html"
-                            style="color: white;">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-redbar" href="carrito.html">Orden</a>
-                    </li>
-                </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <img src="img/logo50amigos.svg" class="img-fluid img-offcanv" alt="encom">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <h4>Nombre de usuario</h4>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="entradas-admin.html">Editar menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cerrar-sesion" href="entradas-admin.html">Cerrar sesión</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="container-sm cont-img-titulo">
+    <div class="container-sm cont-img-titulo" style="padding-top: 20px;">
         <div class="row">
-            <img src="img/helados-title.svg" class="card-img-top img-titulo" alt="...">
+            <img src="img/bebidas-title.svg" class="card-img-top img-titulo" alt="...">
         </div>
     </div>
 
     <div class="container-sm cont-grande">
         <ul class="nav nav-pills justify-content-end btng-secciones">
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" aria-current="page" href="entradas-comensal.html">Entradas</a>
+                <a class="nav-link btn-inactive-sec" aria-current="page" href="entradas-admin.html">Entradas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" href="principales-comensal.html">Platillos Principales</a>
+                <a class="nav-link btn-inactive-sec" href="principales-admin.html">Platillos Principales</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec " href="bebidas-comensal.html">Bebidas</a>
+                <a class="nav-link active btn-active-sec" href="bebidas-admin.html"
+                    style="background-color: #D3550B;">Bebidas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active btn-active-sec" href="helados-comensal.html"
-                    style="background-color: #EE7728;">Helados</a>
+                <a class="nav-link btn-inactive-sec" href="helados-admin.html">Helados</a>
             </li>
         </ul>
 
@@ -82,6 +92,10 @@
                 </div>
                 <!-- Add more cards as needed -->
             </div>
+        </div>
+
+        <div class="container-sm" style="text-align: center;">
+            <a href="#" class="btn btn-nuevo">Agregar platillo +</a>
         </div>
     </div>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Entradas</title>
+    <title>Platillos Principales</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sigmar&display=swap" rel="stylesheet">
@@ -25,7 +25,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-redbar" aria-current="page" href="../PaolaFrontEnd/Inicio.html">Inicio</a>
+                        <a class="nav-link nav-link-redbar" aria-current="page"
+                            href="../PaolaFrontEnd/Inicio.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-redbar active" href="entradas-comensal.html"
@@ -62,20 +63,21 @@
             </li>
         </ul>
 
+        <!-- Contenedor de cards scroll horizontal -->
         <div class="container-sm cont-cards">
-            <div class="row flex-wrap justify-content-start">
-                <div class="col-md-4">
-                    <div class="card custom-card card-s rounded">
+            <div class="row flex-nowrap overflow-auto">
+                <div class="col" style="padding-top: 20px;">
+                    <div class="card card-s rounded">
                         <img src="img/enchiladas.jpeg" class="card-img-top img-card" alt="...">
                         <div class="card-body" style="background-color: #e9981fcd;">
                             <h5 class="card-title">Nombre del platillo</h5>
+                            <p>Precio</p>
                             <p class="card-text overflow-auto texto-card">
                                 Descripción
                             </p>
                             <div class="container-sm" style="text-align: right;">
                                 <a href="#" class="btn card-btn">Ver platillo</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
