@@ -1,119 +1,65 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'base.html' %}
+{% load static %}
+{% block htmlhead %}
     <title>Entradas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Sigmar&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/secciones.css" rel="stylesheet" />
-    <link href="css/navbar-comensal.css" rel="stylesheet" />
-</head>
-
-<body>
-
-    <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Offcanvas navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container-sm cont-img-titulo">
-        <div class="row">
-            <img src="img/entradas-title.svg" class="card-img-top img-titulo" alt="...">
-        </div>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/secciones.css' %}">      
+{% endblock htmlhead %}
+{% block content %}
+{% include 'navbar-admin.html' %}
+<div class="container-sm cont-img-titulo" style="padding-top: 20px;">
+    <div class="row">
+        <img src="{% static 'img/entradas-title.svg' %}" class="card-img-top img-titulo" alt="...">
     </div>
+</div>
 
-    <div class="container-sm cont-grande">
-        <ul class="nav nav-pills justify-content-end btng-secciones">
-            <li class="nav-item">
-                <a class="nav-link active btn-active-sec" aria-current="page" href="entradas-comensal.html"
-                    style="background-color: #D3550B;">Entradas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" href="principales-comensal.html">Platillos Principales</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" href="bebidas-comensal.html">Bebidas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" href="helados-comensal.html">Helados</a>
-            </li>
-        </ul>
+<div class="container-sm cont-grande">
+    <ul class="nav nav-pills justify-content-end btng-secciones">
+        <li class="nav-item">
+            <a class="nav-link active btn-active-sec" aria-current="page" href="entradas-admin.html"
+                style="background-color: #D3550B;">Entradas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-inactive-sec" href="principales-admin.html">Platillos Principales</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-inactive-sec" href="bebidas-admin.html">Bebidas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-inactive-sec" href="helados-admin.html">Helados</a>
+        </li>
+    </ul>
 
-        <div class="container-sm cont-cards">
-            <div class="row flex-wrap justify-content-start">
-                <div class="col-md-4">
-                    <div class="card custom-card card-s rounded">
-                        <img src="img/enchiladas.jpeg" class="card-img-top img-card" alt="...">
-                        <div class="card-body" style="background-color: #e9981fcd;">
-                            <h5 class="card-title">Nombre del platillo</h5>
-                            <p class="card-text overflow-auto texto-card">
-                                Descripción
-                            </p>
-                            <div class="container-sm" style="text-align: right;">
-                                <a href="#" class="btn card-btn-2">Editar</a>
-                                <a href="#" class="btn card-btn">Eliminar</a>
-                            </div>
-
+    <!-- Contenedor de cards scroll horizontal -->
+    <div class="container-sm cont-cards">
+        <div class="row flex-nowrap overflow-auto">
+            {% for p in platillos %}
+            <div class="col" style="padding-top: 20px;">
+                <div class="card card-s rounded">
+                    <img src="{{ p.imagen }}" class="card-img-top img-card" alt="...">
+                    <div class="card-body" style="background-color: #e9981fcd;">
+                        <h5 class="card-title">{{ p.descrpcion }}</h5>
+                        <p>{{ p.precio }}</p>
+                        <p class="card-text overflow-auto texto-card">
+                            Descripción
+                        </p>
+                        <div class="container-sm" style="text-align: right;">
+                            <a href="#" class="btn card-btn-2 btn-editar">Editar</a>
+                            <a href="#" class="btn card-btn">Eliminar</a>
                         </div>
                     </div>
                 </div>
-                <!-- Add more cards as needed -->
             </div>
-        </div>
-        <div class="container-sm" style="text-align: center;">
-            <a href="#" class="btn btn-nuevo">Agregar platillo +</a>
+            {% endfor %}
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-</body>
+    <div class="container-sm" style="text-align: center;">
+        <a href="#" class="btn btn-nuevo">Agregar platillo +</a>
+    </div>
+</div>
 
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+{% endblock content %}

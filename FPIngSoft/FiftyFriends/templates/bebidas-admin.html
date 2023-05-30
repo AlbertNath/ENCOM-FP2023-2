@@ -1,31 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block htmlhead %}
-    <title>Platillos Principales</title>
+    <title>Bebidas</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/secciones.css' %}">      
 {% endblock htmlhead %}
 {% block content %}
 {% include 'navbar-admin.html' %}
 <div class="container-sm cont-img-titulo" style="padding-top: 20px;">
     <div class="row">
-        <img src="{% static 'img/principales-title.svg' %}" class="card-img-top img-titulo" alt="..." style="padding: 20px;">
+        <img src="{% static 'img/bebidas-title.svg' %}" class="card-img-top img-titulo" alt="...">
     </div>
 </div>
 
 <div class="container-sm cont-grande">
     <ul class="nav nav-pills justify-content-end btng-secciones">
         <li class="nav-item">
-            <a class="nav-link btn-inactive-sec" aria-current="page" href="entradas-admin.html">Entradas</a>
+            <a class="nav-link btn-inactive-sec" aria-current="page" href="entradas-comensal.html">Entradas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active btn-active-sec" href="principales-admin.html"
-            style="background-color: #EE7728;">Platillos Principales</a>
+            <a class="nav-link btn-inactive-sec" href="principales-comensal.html">Platillos Principales</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn-inactive-sec" href="bebidas-admin.html">Bebidas</a>
+            <a class="nav-link active btn-active-sec" href="bebidas-comensal.html"
+            style="background-color: #EE7728;">Bebidas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn-inactive-sec" href="helados-admin.html">Helados</a>
+            <a class="nav-link btn-inactive-sec" href="helados-comensal.html">Helados</a>
         </li>
     </ul>
 
