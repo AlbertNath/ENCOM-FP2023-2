@@ -1,4 +1,5 @@
 from django import forms
+from django.db.models import QuerySet
 from django.http import Http404, HttpResponseForbidden, HttpResponseNotAllowed
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
@@ -19,6 +20,10 @@ def iniciarSecion(request, nombre_usuario,contrasenia, template_name='books_pc_m
     return render(request, template_name, ctx)
 
 # ========== platillo CRUD=========3
+def get_platillos() -> QuerySet:
+    orden_act = orden.objects.filter(id_orden=1)[0]
+    return orden_act.id_platillos.all()
+
 def getPlatillos(self, request, *args, **kwargs):
     todos_los_platillos = platillo.objects.all()
     ctxt = {
@@ -75,12 +80,9 @@ def eliminarPlatillo(request, pk, template_name='books_pc_multi_view2platillo_fo
     }
     return render(request, template_name, ctx)
 
-
 class Carrito(View):
     def get(self, request, *args, **kwargs):
-        orden_act = orden.objects.filter(id_orden=1)[0]
-
-        platillos = orden_act.id_platillos.all()
+        platillos = get_platillos()
         total = 0.0
         for i in platillos:
             total += float(i.precio)
@@ -97,10 +99,13 @@ class Carrito(View):
         form = NameForm(request.POST)
 
         cantidades = request.POST.getlist('cantidad[]')
+        articulos =  request.POST.getlist('item[]')
+        print(articulos)
         print(cantidades)
 
         ctxt = {
             'form': form,
+            'total': 0,
             'success': True
         }
         return render(request, 'carrito.html', ctxt)
@@ -113,5 +118,13 @@ class Carrito(View):
         return redirect('carrito')
 
 
-def home(request):
-    return render(request, 'home.html', {})
+
+class Menu(View):
+    def get(self, request, *args, **kwargs):
+        ctxt = {
+            'platillos': platillo.objects.all()
+        }
+        return render(request, 'principales-comensal.html', ctxt)
+
+def inicio(request):
+    return render(request, 'Inicio.html', {})

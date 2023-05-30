@@ -19,7 +19,8 @@ from FiftyFriends.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    path('', home, name='home'),
+    path('inicio/', inicio, name='home'),
+    path('menu/', Menu.as_view(), name='menu'),
     #path('tableta/', LoginTableta.as_view(), name='tableta'),
     #path('home/', Home.as_view(), name='home'),
     #path('home/<int:c_tipo_platillo>/', redir_seccion),
