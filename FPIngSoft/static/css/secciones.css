@@ -45,7 +45,6 @@
 
 .nav-pills .nav-link.active:hover {
     color: black;
-    /* Hover color for the active link */
 }
 
 .nav-pills .nav-link:hover {
@@ -86,3 +85,4 @@
     background-color: #6D2C02;
     color: white;
 }
+
