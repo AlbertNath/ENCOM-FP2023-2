@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block htmlhead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/carrito.css' %}">      
+{% endblock htmlhead %}
 {% block content %}
   <div class="container-sm" style="background-color: #FEF3E4; margin-top: 70px;">
     <br>

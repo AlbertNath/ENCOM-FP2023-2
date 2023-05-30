@@ -1,7 +1,13 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #ffd89d6f;">
+{% load static %}
+{% block htmlhead %}
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar-comensal.css' %}">      
+{% endblock htmlhead %}
+{% block content %}
+  <nav class="navbar navbar-expand-lg" style="background-color: #ffd89d6f;">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
-            <img src="img/logo50amigos.png" class="img-fluid img-platillo" alt="encom">
+            <img src="{% static 'img/logo50amigos.png' %}" class="img-fluid img-platillo" alt="encom">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ">
@@ -18,3 +24,4 @@
         </div>
     </div>
 </nav>
+{% endblock content %}
