@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block htmlhead %}
+    <title>Votación de helados</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/secciones.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/votacion.css' %}">      
+{% endblock htmlhead %}
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container-fluid justify-content-center">
+    <div class="container-sm justify-content-center" style="margin-top: 20px; background-color: #FFD494;">
+        <div class="row" style="text-align: center; padding: 30px;">
+            <h1>Votación de helados</h1>
+        </div>
+        <div class="container-sm" style="text-align: center; padding-top: 30px;">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label" style="text-align: center;">Ingresa el nombre
+                        del comensal</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                </div>
+                <br>
+                <p>Elige un sabor:</p>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example"
+                    style="padding-bottom: 30px; width: 70%;">
+                    <button type="button" name="sabor" value="Sabor 1" class="btn btn-sabor">Sabor 1</button>
+                    <button type="button" name="sabor" value="Sabor 2" class="btn btn-sabor">Sabor 2</button>
+                    <button type="button" name="sabor" value="Sabor 3" class="btn btn-sabor">Sabor 3</button>
+                    <button type="button" name="sabor" value="Sabor 4" class="btn btn-sabor">Sabor 4</button>
+                </div>
+            </form>
+        </div>
+        <div class="container-sm" style="text-align: center; padding-top: 30px;">
+            <button type="button" class="btn btn-add-comensal">Añadir comensal</button><br>
+            <button type="button" class="btn btn-submit-comensales">Terminar votación</button>
+        </div>
+    </div>
+</div>
+{% endblock content %}
