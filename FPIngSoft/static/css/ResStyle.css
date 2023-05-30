@@ -1,10 +1,4 @@
-body{
-    background-color : #FFE3B8;
-    background-image: url('../img/bg2.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
+
 .img-platillo{
     width:35px; 
     margin-left: 20px;
@@ -40,11 +34,12 @@ body{
     /* Example: change the color to red on hover */
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: #FFD494;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     border: 1.5px solid #970101;
-    border-radius: 13px; font-family: Piazzolla;
+    border-radius: 13px;
+    font-family: Piazzolla;
     height: 38px;
     width: 180px;
     left: 262px;
@@ -55,12 +50,12 @@ body{
     line-height: 16px;
     border-radius: 20px;
     position: absolute;
-    left: 43.98%;
+    left: 42.98%;
     right: 38.18%;
-    top: 80.62%;
+    top: 88.62%;
     bottom: 25.41%;
-    color :#970101;
-}
+    color: #970101;
+  }
 
 h1.Titulo{
     font-family: 'Sigmar One';
@@ -127,80 +122,73 @@ h2.Opcion{
 
 }
 
-.table-sm{
+.table-sm {
     background: rgba(211, 84, 0, 0.16);
-    box-sizing: border-box;    
+    box-sizing: border-box;
     border: 3px solid #D35400;
     font-family: 'Roboto', cursive;
     position: absolute;
     width: 250px;
     height: 220px;
-    left: 220px;
-    top: 210px;
+    left: 140px;
+    top: 180px;
 }
-
-.table-sm-2{
+.table-sm-2 {
     background: rgba(211, 84, 0, 0.16);
-    box-sizing: border-box;    
+    box-sizing: border-box;
     border: 3px solid #D35400;
     font-family: 'Roboto', cursive;
     position: absolute;
     width: 250px;
     height: 220px;
-    left: 520px;
-    top: 210px;
+    left: 420px;
+    top: 180px;
 }
-
-.table-sm-3{
+.table-sm-3 {
     background: rgba(211, 84, 0, 0.16);
-    box-sizing: border-box;    
+    box-sizing: border-box;
     border: 3px solid #D35400;
     font-family: 'Roboto', cursive;
     position: absolute;
     width: 250px;
     height: 220px;
-    left: 820px;
-    top: 210px;
+    left: 700px;
+    top: 180px;
 }
-
-.table-sm-4{
+.table-sm-4 {
     background: rgba(211, 84, 0, 0.16);
-    box-sizing: border-box;    
-    border: 3px solid #970101;;
+    box-sizing: border-box;
+    border: 3px solid #970101;
     font-family: 'Roboto', cursive;
     position: absolute;
     width: 250px;
     height: 50px;
-    left: 220px;
-    top: 450px;
+    left: 140px;
+    top: 420px;
 }
-
-
-.table-sm-5{
+.table-sm-5 {
     background: rgba(211, 84, 0, 0.16);
-    box-sizing: border-box;    
-    border: 3px solid #970101;;
+    box-sizing: border-box;
+    border: 3px solid #970101;
     font-family: 'Roboto', cursive;
     position: absolute;
     width: 250px;
     height: 50px;
-    left: 520px;
-    top: 450px;
+    left: 420px;
+    top: 420px;
 }
 
-.table-sm-6{
+.table-sm-6 {
     background: rgba(211, 84, 0, 0.16);
-    box-sizing: border-box;    
-    border: 3px solid #970101;;
+    box-sizing: border-box;
+    border: 3px solid #970101;
     font-family: 'Roboto', cursive;
     position: absolute;
     width: 250px;
     height: 50px;
-    left: 820px;
-    top: 450px;
+    left: 700px;
+    top: 420px;
 }
-
-
 
 p.Contenido2{
     position: absolute;
@@ -218,12 +206,12 @@ p.Contenido3{
     top: 180px;
 }
 
-.container-sm{
+.container-sm {
     position: absolute;
-    width: 890px;
-    height: 480px;
-    left: 200px;
-    top: 120px;
+    width: 891px;
+    height: 460px;
+    left: 100px;
+    top: 80px;
     border-radius: 20px;
     background: #FFD494;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

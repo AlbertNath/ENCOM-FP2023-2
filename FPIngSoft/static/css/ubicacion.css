@@ -1,19 +1,4 @@
 
-.wrapper{
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-body{
-    background-color : #FFE3B8;
-    background-image: url('../img/bg2.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-
-
 h1.Titulo{
     font-family: 'Sigmar One';
     font-style: normal;

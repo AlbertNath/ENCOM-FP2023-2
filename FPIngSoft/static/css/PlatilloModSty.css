@@ -1,11 +1,3 @@
-body{
-    background-color : #FFE3B8;
-    background-image: url('../img/bg2.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
 .img-platillo{
     width:35px; 
     left: 250px;
@@ -26,14 +18,14 @@ body{
     position: relative; 
     z-index: 1;
 }
-.ImagenDos{
-    width:140px;
+.ImagenDos {
+    width: 140px;
     height: 140px;
-    top: 26em;
-    left: 100px;
-    position: relative; 
+    top: 20em;
+    left: 150px;
+    position: relative;
     z-index: 1;
-}
+  }
 
 .navbar-comensal{
     background-color: #970101;
@@ -53,11 +45,12 @@ textarea {
     /* Example: change the color to red on hover */
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: #FFD494;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     border: 1.5px solid #970101;
-    border-radius: 13px; font-family: Piazzolla;
+    border-radius: 13px;
+    font-family: Piazzolla;
     height: 60px;
     width: 150px;
     left: 262px;
@@ -70,16 +63,17 @@ textarea {
     position: absolute;
     left: 68.98%;
     right: 35.18%;
-    top: 76.62%;
+    top: 84.62%;
     bottom: 25.41%;
-    color :#970101;
-}
+    color: #970101;
+  }
 
 .btn-primary {
     background-color: #a74d04;
-    box-sizing: border-box;  
-    border: 1.5px solid  #a74d04;  
-    border-radius: 13px; font-family: Piazzolla;
+    box-sizing: border-box;
+    border: 1.5px solid #a74d04;
+    border-radius: 13px;
+    font-family: Piazzolla;
     height: 60px;
     width: 150px;
     left: 262px;
@@ -92,10 +86,10 @@ textarea {
     position: absolute;
     left: 48.98%;
     right: 35.18%;
-    top: 76.62%;
+    top: 84.62%;
     bottom: 25.41%;
-    color :white;
-}
+    color: white;
+  }
 
 h1.Titulo{
     font-family: 'Sigmar One';
@@ -173,12 +167,12 @@ p.Contenido3{
     top: 180px;
 }
 
-.container-sm{
+.container-sm {
     position: absolute;
     width: 890px;
-    height: 480px;
-    left: 200px;
-    top: 120px;
+    height: 460px;
+    left: 100px;
+    top: 80px;
     border-radius: 20px;
     background: #FFD494;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -195,7 +189,7 @@ p.Contenido3{
     border-radius: 20px;
 }
 
-.label1{
+.label1 {
     font-family: 'Roboto' , cursive;
     font-style: italic;
     font-weight: 400;
@@ -204,15 +198,15 @@ p.Contenido3{
     width: 300px;
     border-radius: 5px;
     position: absolute;
-    left:  35.81%;
+    left: 30.81%;
     right: 35.18%;
-    top: 32.62%;
+    top: 32%;
     bottom: 25.41%;
     color: #6E2C00;
+    height: 20%;
+ }
 
-}
-
-.label2{
+ .label2 {
     font-family: 'Roboto' , cursive;
     font-style: italic;
     font-weight: 400;
@@ -221,30 +215,14 @@ p.Contenido3{
     width: 300px;
     border-radius: 5px;
     position: absolute;
-    left:  60.81%;
+    left: 60.81%;
     right: 35.18%;
-    top: 32.62%;
-    bottom: 25.41%;
-    color: #6E2C00;;
-}
-
-.label3{
-    font-family: 'Roboto' , cursive;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 16px;
-    width: 300px;
-    border-radius: 5px;
-    position: absolute;
-    left:  35.81%;
-    right: 35.18%;
-    top: 44.62%;
+    top: 32%;
     bottom: 25.41%;
     color: #6E2C00;
 }
 
-.label4{
+.label3 {
     font-family: 'Roboto' , cursive;
     font-style: italic;
     font-weight: 400;
@@ -253,9 +231,52 @@ p.Contenido3{
     width: 300px;
     border-radius: 5px;
     position: absolute;
-    left:  60.81%;
+    left: 30.81%;
     right: 35.18%;
-    top: 44.62%;
+    top: 46.62%;
+    bottom: 25.41%;
+    color: #6E2C00;
+    height: 18%;
+}
+
+.label4 {
+    font-family: 'Roboto' , cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left: 60.81%;
+    right: 35.18%;
+    top: 46.62%;
     bottom: 25.41%;
     color: #6E2C00;
 }
+
+
+.choseImagen {
+    width: 180px;
+    height: 180px;
+    top: 10em;
+    left: 660px;
+    position: relative;
+    z-index: 1;
+}
+
+.label5 {
+    font-family: 'Roboto' , cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left: 60.81%;
+    right: 35.18%;
+    top: 61.62%;
+    bottom: 25.41%;
+    color: #6E2C00;
+  }
