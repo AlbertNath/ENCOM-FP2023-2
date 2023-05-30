@@ -1,0 +1,40 @@
+.btn-sabor{
+    background-color: #FFBD58;
+    border: 1px solid black;
+    color: black;
+}
+
+.btn-sabor:hover {
+    background-color: #D35400;
+    color: white;
+}
+
+.btn-sabor.active {
+    background-color: #EE7728;
+    color: white;
+}
+
+.btn-add-comensal{
+    width: 40%;
+    background-color: transparent;
+    border: 2px solid #970101;
+    color: #970101;
+    margin: 5px;
+}
+.btn-submit-comensales{
+    width: 40%;
+    background-color: #D35400;
+    color: white;
+    margin: 5px;
+    margin-bottom: 60px;
+}
+
+.btn-add-comensal:hover{
+    background-color: #970101;
+    color: white;
+}
+.btn-submit-comensales:hover{
+    background-color: transparent;
+    border: 2px solid #D35400;
+    color: #D35400;
+}
