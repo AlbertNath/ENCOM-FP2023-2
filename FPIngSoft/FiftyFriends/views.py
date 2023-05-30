@@ -128,3 +128,24 @@ class Menu(View):
 
 def inicio(request):
     return render(request, 'Inicio.html', {})
+#Para probar y ver las vistas 
+def modoAdmin(request) :
+    return render(request, 'ModoAdmin.html', {})
+
+def ubicacion(request) :
+    return render(request, 'UbicacionMesa.html', {})
+
+def EleUsuario(request) :
+    return render(request, 'EleUsuario.html', {})
+
+def ModoResTableta(request) :
+    return render(request, 'ModoResTableta.html', {})
+
+def platillos(request) :
+    return render(request, 'Platillos.html', {})
+
+def Modplatillos(request) :
+    return render(request, 'ModPlatillos.html', {})
+
+def Respuestas(request) :
+    return render(request, 'Respuestas.html', {})

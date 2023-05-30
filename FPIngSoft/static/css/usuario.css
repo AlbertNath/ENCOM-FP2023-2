@@ -1,11 +1,8 @@
 
-
-
 .wrapper{
     max-width: 1000px;
     margin: 0 auto;
 }
-
 
 .btn-primary{
     background: #970101;
@@ -46,12 +43,6 @@
     right: 35.18%;
     top: 75.62%;
     bottom: 25.41%;
-}
-
-body {
-    background-image: url("../img/Fondo2.png");
-    background-repeat: no-repeat;
-    background-size:  100% 121%;
 }
 
 h1.Titulo{

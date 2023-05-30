@@ -1,18 +1,4 @@
 
-
-.container{
-    max-width: 1000px;
-    margin: 0 auto;
-    
-}
-
-body {
-    background-image: url("../img/Fondo2.png");
-    background-repeat: no-repeat;
-    background-size:  100% 141%;
-    width: 100%;
-}
-
 h1.Titulo{
     font-family: 'Sigmar One';
     font-style: normal;
@@ -125,19 +111,19 @@ img.ImagenTres{
     background: #970101;
     border-radius: 15px;
     height: 60px;
-width: 180px;
-left: 262px;
-top: 313px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 16px;
-border-radius: 15px;
+    width: 180px;
+    left: 262px;
+    top: 313px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    border-radius: 15px;
 
-position: absolute;
-left: 66.98%;
-right: 35.18%;
-top: 78.62%;
-bottom: 25.41%;
+    position: absolute;
+    left: 66.98%;
+    right: 35.18%;
+    top: 78.62%;
+    bottom: 25.41%;
 }
