@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Salsa&family=Sigmar+One&display=swap');
+.title{
+    font-family: 'Sigmar One';
+    font-style: normal;
+    text-align: center;
+}
 
+.bod{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
 
 body{
     background-color : #FFE3B8;
@@ -7,7 +14,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 h1{
