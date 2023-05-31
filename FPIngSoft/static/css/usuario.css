@@ -87,7 +87,7 @@ img.ImagenTres {
     width: 80px;
     height: 80px;
     top: 1em;
-    left: 330px;
+    left: 400px;
     position: relative;
     z-index: 1;
 }
@@ -95,7 +95,7 @@ img.ImagenCuatro {
     width: 100px;
     height: 100px;
     top: 1.5em;
-    left: 320px;
+    left: 390px;
     position: relative;
     z-index: 1;
-  }
+}

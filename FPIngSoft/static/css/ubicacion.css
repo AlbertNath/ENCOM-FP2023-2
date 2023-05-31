@@ -1,5 +1,5 @@
 
-h1.Titulo{
+h1.Titulo {
     font-family: 'Sigmar One';
     font-style: normal;
     font-size: 35px;
@@ -8,12 +8,12 @@ h1.Titulo{
     text-align: center;
     position: absolute;
     width: 550px;
-    height: 160px;
+    height: 60px;
     left: 300px;
-    top: 90px;
+    top: 60px;
 } 
 
-h1.Titulo2{
+h1.Titulo2 {
     font-family: 'Sigmar One';
     font-style: normal;
     font-size: 40px;
@@ -22,12 +22,12 @@ h1.Titulo2{
     text-align: center;
     position: absolute;
     width: 380px;
-    height: 150px;
+    height: 50px;
     left: 280px;
-    top: 130px;
+    top: 100px;
 }
 
-h3.SubTitulo{
+h3.SubTitulo {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -36,12 +36,11 @@ h3.SubTitulo{
     text-align: center;
     position: absolute;
     width: 650px;
-    height: 240px;
-    left: 300px;
-    top: 230px;
+    height: 60px;
+    left: 290px;
+    top: 170px;
 }
-
-h3.SubTitulo2{
+h3.SubTitulo2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -50,18 +49,18 @@ h3.SubTitulo2{
     text-align: center;
     position: absolute;
     width: 650px;
-    height: 240px;
-    left: 230px;
-    top: 260px;
+    height: 40px;
+    left: 215px;
+    top: 196px;
 }
 
-.form-group{
+.form-group {
     position: absolute;
-    width: 20% ;
-    height: 60%;
+    width: 23%;
+    height: 300px;
     left: 43.81%;
     right: 35.18%;
-    top: 65.62%;
+    top: 48.62%;
     bottom: 25.41%;
 }
 
@@ -84,23 +83,23 @@ img.ImagenDos{
     
 }
 
-img.ImagenTres{
-    width:120px;
-    height: 60px;
-    top: 9.9em;
-    left: 320px;;
-    position: relative; 
+img.ImagenTres {
+    width: 100px;
+    height: 50px;
+    top: 5.8em;
+    left: 308px;
+    position: relative;
     z-index: 1;
 }
 
-img.ImagenCuatro{
-    width: 100px;
-    height: 80px;
-    top: 14.9em;
-    left: 240px;;
-    position: relative; 
-    z-index: 1;  
-}
+img.ImagenCuatro {
+    width: 80px;
+    height: 60px;
+    top: 11.5em;
+    left: 220px;
+    position: relative;
+    z-index: 1;
+  }
 
 .col-sm-10{
     width: 280px;
@@ -112,13 +111,13 @@ img.ImagenCuatro{
     bottom: 25.41%;
 }
 
-.subirBajar{
+.subirBajar {
     width: 280px;
     border-radius: 5px;
     position: absolute;
     left: 43.81%;
     right: 35.18%;
-    top: 50.80%;
+    top: 60.80%;
     bottom: 25.41%;
 }
 
