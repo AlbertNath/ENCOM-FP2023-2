@@ -110,7 +110,7 @@ class Carrito(View):
         }
         return render(request, 'carrito.html', ctxt)
 
-    def agregar_platillo(request, id_c, id_p):
+    def agregar_platillo(request, cat, id_c, id_p):
         carrito = orden.objects.filter(id_orden=1)[0]
         p = platillo.objects.filter(id_platillo=id_p).get()
 
@@ -149,13 +149,13 @@ def categoria(request, cat):
         case 'Bebida':
             platillos = m.get_platillos_categoria(cat)
             return render(request, 'bebidas-comensal.html', {'platillos': platillos})
-        # case 'Helado':
-        #     platillos = m.get_platillos_categoria(cat)
-        #     return render(request, 'helados-comensal.html', {'platillos': platillos})
+        case 'Helado':
+            platillos = m.get_platillos_categoria(cat)
+            return render(request, 'helados-comensal.html', {'platillos': platillos})
 
     return redirect('..')
 
-def get_platillo(request, id_p, *args, **kwargs):
+def get_platillo(request, cat, id_p, *args, **kwargs):
     p = platillo.objects.filter(id_platillo=id_p).get()
 
     ctxt = {'platillo': p}

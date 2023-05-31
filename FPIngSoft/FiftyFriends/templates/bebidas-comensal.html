@@ -15,17 +15,17 @@
     <div class="container-sm cont-grande">
         <ul class="nav nav-pills justify-content-end btng-secciones">
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" aria-current="page" href="entradas-comensal.html">Entradas</a>
+                <a class="nav-link btn-inactive-sec" aria-current="page" href="{% url 'categoria' 'Entrada' %}">Entradas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" href="principales-comensal.html">Platillos Principales</a>
+                <a class="nav-link btn-inactive-sec" href="{% url 'categoria' 'Principal' %}">Platillos Principales</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active btn-active-sec" href="bebidas-comensal.html"
+                <a class="nav-link active btn-active-sec" href="{% url 'categoria' 'Bebida' %}"
                 style="background-color: #EE7728;">Bebidas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" href="helados-comensal.html">Helados</a>
+                <a class="nav-link btn-inactive-sec" href="{% url 'categoria' 'Helado' %}">Helados</a>
             </li>
         </ul>
 

@@ -13,19 +13,19 @@
     </div>
 
     <div class="container-sm cont-grande">
-        <ul class="nav nav-pills justify-content-end btng-secciones" >
+        <ul class="nav nav-pills justify-content-end btng-secciones">
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" aria-current="page" href="entradas-comensal.html">Entradas</a>
+                <a class="nav-link btn-inactive-sec" aria-current="page" href="{% url 'categoria' 'Entrada' %}">Entradas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active btn-active-sec" href="principales-comensal.html"
+                <a class="nav-link active btn-active-sec" href="{% url 'categoria' 'Principal' %}"
                 style="background-color: #EE7728;">Platillos Principales</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" href="bebidas-comensal.html">Bebidas</a>
+                <a class="nav-link btn-inactive-sec" href="{% url 'categoria' 'Bebida' %}">Bebidas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-inactive-sec" href="helados-comensal.html">Helados</a>
+                <a class="nav-link btn-inactive-sec" href="{% url 'categoria' 'Helado' %}">Helados</a>
             </li>
         </ul>
 
@@ -42,7 +42,7 @@
                                 Descripción
                             </p>
                             <div class="container-sm" style="text-align: right;">
-                                <a href="{% url 'verPlatillo' p.id_platillo %}" class="btn card-btn">Ver platillo</a>
+                                <a href="{% url 'verPlatillo' p.id_tipo_platillo p.id_platillo %}" class="btn card-btn">Ver platillo</a>
                             </div>
                         </div>
                     </div>
