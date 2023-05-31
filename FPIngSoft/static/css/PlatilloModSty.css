@@ -255,11 +255,10 @@ p.Contenido3{
     color: #6E2C00;
 }
 
-
 .choseImagen {
     width: 180px;
     height: 180px;
-    top: 10em;
+    top: 14.8em;
     left: 660px;
     position: relative;
     z-index: 1;

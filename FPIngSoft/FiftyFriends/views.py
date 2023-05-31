@@ -184,3 +184,6 @@ def Modplatillos(request) :
 
 def Respuestas(request) :
     return render(request, 'Respuestas.html', {})
+
+def entradasAdmin(request) :
+    return render(request,'entradas-admin.html')
