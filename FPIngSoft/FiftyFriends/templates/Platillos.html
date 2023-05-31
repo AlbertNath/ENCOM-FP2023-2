@@ -9,24 +9,25 @@
 {% include 'navbar.html' %}
     <div class="container-sm">
         <div class="container-sm-2">
-            <h1 class="Titulo" > Nombre del platillo </h1>
+            <h1 class="Titulo" > {{ platillo.descrpcion }} </h1>
             <img class="Imagen" src="{% static 'img/logo50amigos.png' %}"  alt="">
         </div>     
     </div>
-    <img class="ImagenUno" src="{% static 'img/enchiladas.jpeg' %}"  alt="">
+    <img class="ImagenUno" src="{{ platillo.imagen }}"  alt="img">
     <p class="Contenido"> Descripción :</p>
     <p class="card-text overflow-auto texto-card">
-        Aquí va la descripción del platillo 
+        {{ platillo.descrpcion }}
     </p>
     <p class="Contenido3"> Categoria :</p>
     <p class="card-text3 overflow-auto texto-card">
-        Categoria del platillo   
+        {{ platillo.id_tipo_platillo }}
     </p>
     <p class="Contenido2"> Precio : </p>
     <p class="card-text2 overflow-auto texto-card">
-        $ XXX  
+        $ {{ platillo.precio }}
     </p>
-    <button type="button" class="btn btn-primary btn-lg">Añadir al carrito +</button>
+    <a type="button" href="{% url 'agregarPlatillo' 1 platillo.id_platillo %}"
+       class="btn btn-primary btn-lg">Añadir al carrito +</a>
     <button type="button" class="btn btn-secondary btn-lg"> Cancelar -</button>
    </div>
 {% endblock content %}

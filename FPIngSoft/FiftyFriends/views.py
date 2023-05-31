@@ -110,6 +110,13 @@ class Carrito(View):
         }
         return render(request, 'carrito.html', ctxt)
 
+    def agregar_platillo(request, id_c, id_p):
+        carrito = orden.objects.filter(id_orden=1)[0]
+        p = platillo.objects.filter(id_platillo=id_p).get()
+
+        carrito.id_platillos.add(p)
+        return redirect('carrito')
+
     def eliminar_platillo(request, id):
         carrito = orden.objects.filter(id_orden=1)[0]
         p = platillo.objects.filter(id_platillo=int(id))
@@ -124,7 +131,35 @@ class Menu(View):
         ctxt = {
             'platillos': platillo.objects.all()
         }
-        return render(request, 'principales-comensal.html', ctxt)
+        return render(request, 'entradas-comensal.html', ctxt)
+
+    def get_platillos_categoria(self, cat):
+        id_cat = c_tipo_platillo.objects.filter(descripcion=cat).get()
+        return platillo.objects.filter(id_tipo_platillo=id_cat.id_tipo_platillo)
+
+def categoria(request, cat):
+    m = Menu()
+    match cat:
+        case 'Entrada':
+            platillos = m.get_platillos_categoria(cat)
+            return render(request, 'entradas-comensal.html', {'platillos': platillos})
+        case 'Principal':
+            platillos = m.get_platillos_categoria(cat)
+            return render(request, 'principales-comensal.html', {'platillos': platillos})
+        case 'Bebida':
+            platillos = m.get_platillos_categoria(cat)
+            return render(request, 'bebidas-comensal.html', {'platillos': platillos})
+        # case 'Helado':
+        #     platillos = m.get_platillos_categoria(cat)
+        #     return render(request, 'helados-comensal.html', {'platillos': platillos})
+
+    return redirect('..')
+
+def get_platillo(request, id_p, *args, **kwargs):
+    p = platillo.objects.filter(id_platillo=id_p).get()
+
+    ctxt = {'platillo': p}
+    return render(request, 'Platillos.html', ctxt)
 
 def inicio(request):
     return render(request, 'Inicio.html', {})
