@@ -87,7 +87,7 @@ img.ImagenTres {
     width: 100px;
     height: 50px;
     top: 5.8em;
-    left: 308px;
+    left: 295px;
     position: relative;
     z-index: 1;
 }
@@ -99,7 +99,7 @@ img.ImagenCuatro {
     left: 220px;
     position: relative;
     z-index: 1;
-  }
+}
 
 .col-sm-10{
     width: 280px;
