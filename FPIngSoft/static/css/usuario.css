@@ -1,5 +1,4 @@
-
-.btn-primary{
+.btn-primary {
     background: #970101;
     border-radius: 15px;
     height: 70px;
@@ -12,10 +11,10 @@
     font-size: 24px;
     line-height: 16px;
     border-radius: 15px;
-    position:  relative;
-    left: 42.81%;
+    position: relative;
+    left: 38.81%;
     right: 35.18%;
-    top: 62.62%;
+    top: -111.38%;
     bottom: 25.41%;
 }
 
@@ -34,9 +33,9 @@
     line-height: 22px;
     border-radius: 15px;
     position: relative;
-    left: 42.81%;
+    left: 36.81%;
     right: 35.18%;
-    top: 80.62%;
+    top: -71.38%;
     bottom: 25.41%;
 }
 
@@ -46,9 +45,9 @@ h1.Titulo {
     font-size: 95px;
     line-height: 16px;
     position: relative;
-    top: 0.8em;
-    left: 250px;
-}
+    top: -1em;
+    left: 280px;
+  }
 
 h3.SubTitulo {
     font-family: 'Roboto';
@@ -58,10 +57,10 @@ h3.SubTitulo {
     line-height: 16px;
     text-align: center;
     left: 30px;
-    top: 6.5em;
+    top: -2.5em;
     border-radius: 0px;
     position: relative;
-  }
+}
   
 /*Imagenes*/
 
@@ -76,9 +75,9 @@ img.ImagenUno {
 
 img.ImagenDos {
     width: 230px;
-    height: 130px;
-    top: -2em;
-    left: 450px;
+    height: 180px;
+    top: -5em;
+    left: 473px;
     position: relative;
     z-index: 1;
 }
@@ -86,15 +85,16 @@ img.ImagenDos {
 img.ImagenTres {
     width: 80px;
     height: 80px;
-    top: 1em;
+    top: -6em;
     left: 400px;
     position: relative;
     z-index: 1;
 }
+
 img.ImagenCuatro {
     width: 100px;
     height: 100px;
-    top: 1.5em;
+    top: -5.5em;
     left: 390px;
     position: relative;
     z-index: 1;
