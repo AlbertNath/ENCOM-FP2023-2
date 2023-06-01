@@ -49,11 +49,8 @@
     <div class="row">
       <div class="container-sm" style="background-color: #FFD494;">
         <br>
-        <a href="{% url 'home' %}" type="button" class="btn btn-outline-dark">Agregar platillo +</a>
-        <br>
+        <a href="{% url 'menu' %}" type="button" class="btn btn-outline-dark">Agregar platillo +</a>
         <div class="container-sm" style="text-align: right;">
-          Total: ${{ total }}
-          <br>
           <button type="submit" class="btn btn-outline-dark" style="background-color: orange;" data-bs-toggle="modal"
             data-bs-target="#exampleModal">
             Confirmar orden
@@ -69,7 +66,13 @@
         <div class="modal-content" style="background-color: #FFE3B8;">
           <div class="modal-header" style="border-color: #EBC68F;">
             <h1 class="modal-title fs-5" id="exampleModalLabel">
-              ¡Tu orden fue realizada con éxito!</h1>
+              ¡Tu orden fue realizada con éxito!<br />
+              <b>El importe de tu orden es:</b>
+              <br />
+            <h4>
+              ${{ total }}
+            </h4>
+            </h1>
           </div>
           <div class="modal-body" style="border-color: #EBC68F;">
             ¿Deseas iniciar la votación de helados?
@@ -95,7 +98,7 @@
        $("#exitoModal").modal('show');
      });
      $(".modal").on("hidden.bs.modal", function () {
-       window.location = "{% url 'home' %}";
+       window.location = "{% url 'categoria' 'Helado' %}";
      });
     </script>
     {% endif %}

@@ -103,9 +103,16 @@ class Carrito(View):
         print(articulos)
         print(cantidades)
 
+        total = 0.0
+        for a,c in zip(articulos, cantidades):
+            id_art = int(a)
+            p = platillo.objects.filter(id_platillo=id_art).get()
+            total += (float(p.precio) * float(c))
+
+        print(total)
         ctxt = {
             'form': form,
-            'total': 0,
+            'total': total,
             'success': True
         }
         return render(request, 'carrito.html', ctxt)
