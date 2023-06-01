@@ -29,6 +29,7 @@ urlpatterns = [
     path('Modplatillos/', Modplatillos, name='MoPlatillos'),
     path('respuestas/', Respuestas, name='Respuestas'),
     path('adminEntradas/', entradasAdmin, name='Entradas Admin'),
+    path('votacion/', votacion, name='Votación'),
     #path('tableta/', LoginTableta.as_view(), name='tableta'),
     #path('home/', Home.as_view(), name='home'),
     #path('home/<int:c_tipo_platillo>/', redir_seccion),

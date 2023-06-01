@@ -152,3 +152,6 @@ def Respuestas(request) :
 
 def entradasAdmin(request) :
     return render(request,'entradas-admin.html')
+
+def votacion (request) :
+    return render(request, 'resultados-votacion.html')
