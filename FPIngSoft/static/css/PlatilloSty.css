@@ -2,36 +2,23 @@
     width:35px; 
     margin-left: 20px;
 }
-.Imagen{
-    width:70px;
+.Imagen {
+    width: 70px;
     height: 70px;
-    top: 0.5em;
+    top: -11.5em;
     left: 40px;
-    position: relative; 
+    position: relative;
     z-index: 1;
 }
 .ImagenUno {
     width: 300px;
     height: 300px;
-    top: 8em;
-    left: 140px;
+    top: -8em;
+    left: 229px;
     position: relative;
     z-index: 1;
-  }
-
-.navbar-comensal{
-    background-color: #970101;
 }
 
-.nav-link-redbar{
-    color: #faf1e2e0;
-}
-
-.navbar-nav .nav-link:hover {
-    /* Add your hover styles here */
-    color: white;
-    /* Example: change the color to red on hover */
-}
 .btn-secondary {
     background-color: #FFD494;
     box-sizing: border-box;
@@ -47,13 +34,14 @@
     font-size: 18px;
     line-height: 16px;
     border-radius: 15px;
-    position: absolute;
-    left: 68.98%;
+    position: relative;
+    left: 58.98%;
     right: 35.18%;
-    top: 84.62%;
+    top: -23em;
     bottom: 25.41%;
     color: #970101;
-}
+  }
+  
 
 .btn-primary {
     background-color: #a74d04;
@@ -70,21 +58,20 @@
     font-size: 18px;
     line-height: 16px;
     border-radius: 15px;
-    position: absolute;
+    position: relative;
     left: 48.98%;
     right: 35.18%;
-    top: 84.62%;
+    top: -23em;
     bottom: 25.41%;
     color: white;
 }
-
 
 h1.Titulo{
     font-family: 'Sigmar One';
     font-style: normal;
     font-size: 35px;
     line-height: 16px;
-    position: absolute;
+    position: relative;
     width: 550px;
     height: 180px;
     left: 240px;
@@ -101,81 +88,78 @@ p{
     color: #6E2C00;
 }
 p.Contenido {
-    position: absolute;
+    position: relative;
     width: 150px;
     height: 50px;
     left: 480px;
-    top: 240px;
+    top: -11em;
 }
 
 p.Contenido2 {
-    position: absolute;
+    position: relative;
     width: 80px;
     height: 50px;
     left: 480px;
-    top: 420px;
+    top: -17em;
 }
 
 p.Contenido3 {
-    position: absolute;
+    position: relative;
     width: 550px;
     height: 30px;
     left: 480px;
-    top: 200px;
+    top: -23em;
 }
-
 .card-text {
     font-family: 'Roboto', cursive;
-    position: absolute;
-    width: 500px;
-    height: 130px;
+    position: relative;
+    width: 450px;
+    height: 110px;
     left: 480px;
-    top: 270px;
+    top: -13em;
     color: #63574f;
-}
+  }
 
 .card-text2 {
     font-family: 'Roboto', cursive;
-    position: absolute;
+    position: relative;
     width: 200px;
-    height: 20px;
+    height: 30px;
     left: 570px;
-    top: 420px;
+    top: -20em;
     color: #63574f;
 }
 
+
 .card-text3 {
     font-family: 'Roboto', cursive;
-    position: absolute;
-    width: 380px;
+    position: relative;
+    width: 350px;
     height: 20px;
     left: 600px;
-    top: 200px;
+    top: -25em;
     color: #63574f;
 }
 
 
 .container-sm {
-    position: absolute;
+    position: relative;
     width: 890px;
     height: 460px;
-    left: 100px;
+    left: 0px;
     top: 80px;
-    border-radius: 20px;
     background: #FFD494;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
-.container-sm-2{
-    position: absolute;
+.container-sm-2 {
+    position: relative;
     width: 890px;
     height: 80px;
-    left: 0px;
+    left: -10px;
     top: 0px;
     background: #EE7728;
-    border-radius: 20px;
-}
+  }
 
 
    

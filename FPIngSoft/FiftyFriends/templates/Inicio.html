@@ -6,17 +6,17 @@
 {% endblock htmlhead %}
 {% block content %}
 {% include 'navbar.html' %}
-    <div class="row">
+<div class="container-fluid" style="padding-bottom: 50px;">
+    <div class="container-sm">
         <h1 class="Titulo"> Bienvenidos a</h1>
         <h1 class="Titulo3" >   50Amigos  </h1>
     </div>
-    <div class="row">
+    <div class="container-sm">
         <p class="parrafo">
             Tu restaurante de elección para comidas <br>
             con amigos y familia
         </p>
-    </div>
-    <div class="row">
         <img class="ImagenDos" src="{% static 'img/Cuchara2.png' %}"  alt="">
     </div>
+</div>
 {% endblock content %}
