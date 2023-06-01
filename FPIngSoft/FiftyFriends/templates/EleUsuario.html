@@ -17,11 +17,11 @@
             <h3 class="SubTitulo"> Seleccione un modo de usuario</h3>    
         <div class="row">  
                 <img class="ImagenTres" src="{% static 'img/Libreta.png' %}"  alt="">
-            <button type="button" class="btn btn-primary btn-lg">Administrador</button>
+            <button type="button" onclick="location.href = '{% url 'admin:index' %}'" class="btn btn-primary btn-lg">Administrador</button>
         </div> 
         <div class="row"> 
                 <img class="ImagenCuatro"  src="{% static 'img/Tableta.png' %}" alt="">
-                <button type="button" class="btn btn-secondary btn-lg"> Responsable  de Tableta</button>
+                <button type="button" onclick="location.href = '{% url 'ModoResTableta' %}'" class="btn btn-secondary btn-lg"> Responsable  de Tableta</button>
         </div>
             <!--
             <a href="#" class="btnUno">Administrador</a>

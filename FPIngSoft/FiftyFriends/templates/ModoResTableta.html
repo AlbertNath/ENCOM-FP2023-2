@@ -14,33 +14,36 @@
             <h1 class="Titulo" > Panel responsable de tableta </h1>
             <h3 class="SubTitulo"> Introduzca su usuario  y  </h3>
             <h3 class="SubTitulo2">  contraseña para continuar </h3>
-            <div class="row">       
-              <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">
-                <img class="ImagenDos" src="{% static 'img/usuario.png' %}" alt="">  
-              </label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Usuario"
-                style="background-color: #DFD7D7; font-family: Piazzolla;
-                font-style: italic;
-                font-weight: 400;
-                font-size: 24px;
-                line-height: 16px;">
-              </div>
-            </div>
-            <div class="row">              
-              <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">
-                <img class="ImagenTres" src=" {% static 'img/candado.png' %}" alt="">  
-              </label>
-              <div class="col-sm-11">
-                <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Contraseña"
-                style="background-color: #DFD7D7; font-family: Piazzolla;
-                font-style: italic;
-                font-weight: 400;
-                font-size: 24px;
-                line-height: 16px;">
+            <form method="POST">
+              {% csrf_token %}
+              <div class="row">
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">
+                  <img class="ImagenDos" src="{% static 'img/usuario.png' %}" alt="">
+                </label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Usuario"
+                         name="correoRes" style="background-color: #DFD7D7; font-family: Piazzolla;
+                               font-style: italic;
+                               font-weight: 400;
+                               font-size: 24px;
+                               line-height: 16px;" required>
+                </div>
               </div>
               <div class="row">
-            <button type="button" class="btn btn-primary btn-lg">Iniciar Sesión</button>
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">
+                  <img class="ImagenTres" src=" {% static 'img/candado.png' %}" alt="">
+                </label>
+                <div class="col-sm-11">
+                  <input type="password" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Contraseña"
+                         name="contraseña" style="background-color: #DFD7D7; font-family: Piazzolla;
+                               font-style: italic;
+                               font-weight: 400;
+                               font-size: 24px;
+                               line-height: 16px;" required>
+                </div>
+                <div class="row">
+                  <button type="submit" class="btn btn-primary btn-lg">Iniciar Sesión</button>
+            </form>
         </div> 
             </div>
         </div>

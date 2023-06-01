@@ -168,14 +168,33 @@ def get_platillo(request, cat, id_p, *args, **kwargs):
     ctxt = {'platillo': p}
     return render(request, 'Platillos.html', ctxt)
 
+
+class LogginRespTab(View):
+    def get(self, request):
+        return render(request, 'ModoResTableta.html')
+
+    def post(self, request):
+        correo = request.POST['correoRes']
+        psswrd = request.POST['contraseña']
+        return redirect('ubicacion')
+
+class Ubicacion(View):
+    def get(self, request):
+        ubicaciones = c_ubicacion.objects.all()
+        return render(request, 'UbicacionMesa.html', {'ubicaciones': ubicaciones})
+
+    def post(self, request):
+        redirect('inicio')
+
+def loggin_init(request):
+    return render(request, 'EleUsuario.html', {})
+
 def inicio(request):
     return render(request, 'Inicio.html', {})
-#Para probar y ver las vistas 
+#Para probar y ver las vistas
 def modoAdmin(request) :
     return render(request, 'ModoAdmin.html', {})
 
-def ubicacion(request) :
-    return render(request, 'UbicacionMesa.html', {})
 
 def EleUsuario(request) :
     return render(request, 'EleUsuario.html', {})

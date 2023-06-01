@@ -18,16 +18,17 @@ from django.urls import path
 from FiftyFriends.views import *
 
 urlpatterns = [
+    path('', loggin_init, name='loggin'),
     path('admin/', admin.site.urls, name='admin'),
-    path('inicio/', inicio, name='home'),
+    path('inicio/', inicio, name='inicio'),
     path('menu/', Menu.as_view(), name='menu'),
     path('menu/<str:cat>/', categoria, name='categoria'),
     path('menu/<str:cat>/<int:id_p>/', get_platillo, name='verPlatillo'),
     path('menu/<str:cat>/<int:id_c>/<int:id_p>/', Carrito.agregar_platillo, name='agregarPlatillo'),
     path('modoAdmin/', modoAdmin , name='Modo Admin'),
-    path('ubicacion/', ubicacion, name='Ubicacion'),
+    path('ubicacion/', Ubicacion.as_view(), name='ubicacion'),
     path('eleUsuario/', EleUsuario, name='EleccionUsuario'),
-    path('modoResTableta/', ModoResTableta, name='ModoResTableta'),
+    path('modoResTableta/', LogginRespTab.as_view(), name='ModoResTableta'),
     path('platillos/', platillos, name='Platillos'),
     path('Modplatillos/', Modplatillos, name='MoPlatillos'),
     path('respuestas/', Respuestas, name='Respuestas'),
