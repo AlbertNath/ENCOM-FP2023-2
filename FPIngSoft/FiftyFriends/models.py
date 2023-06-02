@@ -95,3 +95,9 @@ class orden(models.Model):
 
     def __str__(self):
         return str(self.id_orden)
+        
+class votacion(models.Model):
+    nombre = models.TextField()
+    helado = models.TextField()
+    def __str__(self):
+        return str(self.helado)

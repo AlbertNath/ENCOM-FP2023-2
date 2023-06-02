@@ -2,8 +2,8 @@
 {% load static %}
 {% block htmlhead %}
     <title>Resultados votación</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/secciones.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/resultados-votacion.css' %}">      
+    <link rel="stylesheet" type="text/css" href="{% static 'css/secciones.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/resultados-votacion.css' %}">    
 {% endblock htmlhead %}
 {% block content %}
 {% include 'navbar.html' %}
@@ -18,9 +18,26 @@
         </div>
         <div class="container-sm" style="text-align: center; width: 80%; padding-bottom: 50px;">
             <h1 class="title">Sabor Ganador</h1>
+            <h1 class="title">{{ganador.helado}}</h1>
+            <h3>Detalles de los votos</h3>
+
+            <table>
+                <tr>
+                  <th>Sabor</th>
+                  <th>Total de votos</th>
+                </tr>
+                {% for exp in explicacion %}
+                    <tr>
+                    <td>{{exp.helado}}</td>
+                    <td>{{exp.count}}</td>
+                    </tr>
+                {% endfor %}
+              </table>
+
+
             <div class="container-fluid">
-                <button type="button" class="btn btn-cerrar">Cerrar</button>
-                <button type="button" class="btn btn-terminar">Ver respuestas</button>
+
+                <a href="{% url 'menu' %}" class="btn btn-cerrar">Cerrar</a>
             </div>
         </div>
     </div>

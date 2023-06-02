@@ -3,7 +3,8 @@ from django.db.models import QuerySet
 from django.http import Http404, HttpResponseForbidden, HttpResponseNotAllowed
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from .models import administrador, c_ubicacion, orden, platillo, c_tipo_platillo, tableta
+from django.db.models import Count
+from .models import administrador, c_ubicacion, orden, platillo, c_tipo_platillo, tableta,votacion
 from .forms import AdministradorForm, PlatilloForm, NameForm
 
 # ========== Login =========
@@ -217,3 +218,44 @@ def entradasAdmin(request) :
 class Votacion(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'votacion.html')
+class Votacion(View):
+    def get(self, request, *args, **kwargs):
+        votacion.objects.all().delete()
+        id_helado = get_object_or_404(c_tipo_platillo, descripcion = 'Helado')
+        sabores = platillo.objects.filter(id_tipo_platillo=4)
+        ctxt = {
+            'sabores': sabores,
+        }
+
+        return render(request, 'votacion.html',ctxt)
+    
+   
+        
+    def post(self, request, *args, **kwargs):
+        print('POST request reached')
+        form = NameForm(request.POST)
+
+        comensal = request.POST.getlist('nombreComensal')
+        sabor =  request.POST.getlist('sabor')
+        
+        voto = votacion(nombre= comensal, helado = sabor)
+        voto.save()
+
+        id_helado = get_object_or_404(c_tipo_platillo, descripcion = 'Helado')
+        sabores = platillo.objects.filter(id_tipo_platillo=4)
+        ctxt = {
+            'sabores': sabores,
+            'form': form
+        }
+
+        return render(request, 'votacion.html',ctxt)
+
+    def termina_voto(request):
+        explicacion = votacion.objects.values('helado').order_by('helado').annotate(count=Count('helado')).order_by('-count')
+        ganador = explicacion.first()
+        ctxt = {
+            'ganador': ganador,
+            'explicacion': explicacion,
+        }
+
+        return render(request, 'resultados-votacion.html',ctxt)
