@@ -18,6 +18,8 @@
             <h3 class="SubTitulo2">  de la mesa para continuar </h3>
         </div>                          
                 <img class="ImagenTres" src="{% static 'img/mesa2.png' %}"  alt="">
+                <form method="POST">
+                  {% csrf_token %}
                   <div class="subirBajar">
                   <label class="label"for="mesas">Número de mesas (1-20):</label>
                     <input class="subirBajar2" type="number" id="mesas" name="mesas"
@@ -36,54 +38,16 @@
                     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">
                     </label>
                   </div>
-                    <!-- 
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Número de Mesa"
-                      style="
-                      background-color: inherit;
-                      box-sizing: border-box;    
-                      border: 5px solid #970101;
-                      border-radius: 13px;
-                      font-family: Piazzolla;
-                      font-style: italic;
-                      font-weight: 400;
-                      font-size: 24px;
-                      line-height: 16px;">
-                    </div>
-                     -->
-                 
                      
                 <img class="ImagenCuatro"  src="{% static 'img/ubicacion.png' %}" alt="">
-                <!--
-                <form>
-                  <div class="form-row">  
-                      <div class="form-group col-md-4">
-                        <label for="inputState"></label>
-                        <select class="eleccion" id="inputState" class="form-control"
-                        style="
-                          background: inherit;
-                          border-radius: 15px;
-                          border: 5px solid #D35400;
-                          font-family: Piazzolla;
-                          font-style: italic;
-                          font-weight: 400;
-                          font-size: 24px;
-                          line-height: 16px;
-                          height: 15%;
-                          ">
-                          <option selected>Jardín</option>
-                          <option>Terraza</option>
-                          <option>Balcón</option>
-                          <option>Comedor Central</option>
-                        </select>
-                      </div>
-                 -->
-               </form>
+                
+               
+                
                     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">
                     </label>
                     <div class="col-sm-11">
-                      <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Ubicación"
-                      style="
+                      
+                      <select name="ubicacion"  style="
                       background-color: inherit;
                       box-sizing: border-box;    
                       border: 5px solid #D35400;
@@ -92,13 +56,17 @@
                       font-weight: 400;
                       font-size: 24px;
                       line-height: 16px;">
-                     
+                        <option selected="selected" disabled>Ubicación</option>
+                        {% for u in ubicaciones %}
+                        <option name="3" value="{{ u.descripcion }}" class="btn btn-sabor" id ="{{ u.descripcion }}" > {{ u.descripcion }}</option>
+                        {% endfor %}
+                      </select>
                     </div>
                     <br>
                 <div class="row">
-                  <button type="button" class="btn btn-secondary btn-lg"> Continuar</button>
+                  <button type="submit" class="btn btn-secondary btn-lg">Continuar</button>
                 </div>
-            
+              </form>
             <!--
             <a href="#" class="btnUno">Administrador</a>
             <a href="#" class="btnDos">Tipo de Usuario</a> -->

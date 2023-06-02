@@ -184,8 +184,15 @@ class Ubicacion(View):
         ubicaciones = c_ubicacion.objects.all()
         return render(request, 'UbicacionMesa.html', {'ubicaciones': ubicaciones})
 
-    def post(self, request):
-        redirect('inicio')
+    def post(self, request, *args, **kwargs):
+        form = NameForm(request.POST)
+        print('POST request reached')
+        mesas = request.POST.get('mesas')
+        ubi =  request.POST.get('ubicacion') 
+        
+        if mesas.isdigit() and ubi != None:
+            return redirect('inicio')
+        return redirect('ubicacion')
 
 def loggin_init(request):
     return render(request, 'EleUsuario.html', {})
@@ -216,7 +223,6 @@ class Votacion(View):
 class Votacion(View):
     def get(self, request, *args, **kwargs):
         votacion.objects.all().delete()
-        id_helado = get_object_or_404(c_tipo_platillo, descripcion = 'Helado')
         sabores = platillo.objects.filter(id_tipo_platillo=4)
         ctxt = {
             'sabores': sabores,
@@ -231,12 +237,12 @@ class Votacion(View):
         form = NameForm(request.POST)
 
         comensal = request.POST.getlist('nombreComensal')
-        sabor =  request.POST.get('sabor')  #request.POST.getlist('sabor')
-        
-        voto = votacion(nombre= comensal, helado = sabor)
-        voto.save()
+        sabor =  request.POST.get('sabor') 
+        if sabor != None:
+            voto = votacion(nombre= comensal, helado = sabor)
+            voto.save()
 
-        id_helado = get_object_or_404(c_tipo_platillo, descripcion = 'Helado')
+        
         sabores = platillo.objects.filter(id_tipo_platillo=4)
         ctxt = {
             'sabores': sabores,
