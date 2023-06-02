@@ -25,14 +25,14 @@
                 <p>Elige un sabor:</p>
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example"
                     style="padding-bottom: 30px; width: 70%;">
-                    <input list="browsers" name="sabor" id="browser">
-                    <datalist id="browsers">
+                    <select name="sabor">
+                    <option selected="selected" disabled>Sabor de helado</option>
                     {% for s in sabores %}
-                    <option name="sabor" value="{{ s.descrpcion }}" class="btn btn-sabor" id ="{{ s.descrpcion }}" >
+                    <option name="3" value="{{ s.descrpcion }}" class="btn btn-sabor" id ="{{ s.descrpcion }}" > {{ s.descrpcion }}</option>
                     {% endfor %}
-                    </datalist>
+                </select>
                 </div>
-                  
+
             
         </div>
         <div class="container-sm" style="text-align: center; padding-top: 30px;">

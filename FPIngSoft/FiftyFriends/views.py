@@ -236,7 +236,7 @@ class Votacion(View):
         form = NameForm(request.POST)
 
         comensal = request.POST.getlist('nombreComensal')
-        sabor =  request.POST.getlist('sabor')
+        sabor =  request.POST.get('sabor')  #request.POST.getlist('sabor')
         
         voto = votacion(nombre= comensal, helado = sabor)
         voto.save()
