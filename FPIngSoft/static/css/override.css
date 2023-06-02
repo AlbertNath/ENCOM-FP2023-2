@@ -16,7 +16,7 @@ h1 {
     height: 70px;
     top: 0.5em;
     left: 40px;
-    position: relative; 
+    position: center; 
     z-index: 1;
 }
 #header{
@@ -37,9 +37,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     font-style: italic;
-  }
+}
 caption{
     background: #970101 !important;
 }

@@ -5,7 +5,7 @@
 .Imagen {
     width: 70px;
     height: 70px;
-    top: -11.5em;
+    top: -2.5em;
     left: 40px;
     position: relative;
     z-index: 1;
@@ -40,7 +40,7 @@
     top: -23em;
     bottom: 25.41%;
     color: #970101;
-  }
+}
   
 
 .btn-primary {
@@ -66,18 +66,17 @@
     color: white;
 }
 
-h1.Titulo{
+h1.Titulo {
     font-family: 'Sigmar One';
     font-style: normal;
     font-size: 35px;
     line-height: 16px;
     position: relative;
     width: 550px;
-    height: 180px;
+    height: 40px;
     left: 240px;
-    top: 40px;
+    top: 20px;
 }
-
 
 p{
     font-family: 'Roboto';
