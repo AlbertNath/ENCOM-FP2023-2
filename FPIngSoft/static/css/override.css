@@ -20,30 +20,55 @@ h1 {
     z-index: 1;
 }
 #header{
-    background: #EE7728;
+    background: #970101;
 }
 
+#content{
+    background: #FFD494; 
+}
+#footer{
+    background: #EE7728;
+}
 a:link, a:visited {
     font-family: Piazzolla;
     font-style: italic;
     color: #a74d04;
 }
+.required{
+    font-family: Roboto;
+}
 body {
     /* The image used */
-    background-image: url( 'FondoDeVista.png') !important;
-    /* Full height */
-    height: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
+    background-image: url( '../img/bg2.svg') !important;
     background-repeat: no-repeat;
     background-size: cover;
     font-style: italic;
+    background-attachment: fixed;
+
+}
+#toggle-nav-sidebar{
+    background-color: #970101;
+}
+
+
+.default{
+    background-color: #FFD494;
+    box-sizing: border-box;
+    border: 2px solid #970101;
+    color: #970101;
+}
+
+.model-group{
+    background-color: red;
 }
 caption{
     background: #970101 !important;
 }
 input[type=submit]{
-    background-color: #a74d04  !important;
+    background-color: #FFD494;
+    box-sizing: border-box;
+    border: 2px solid #970101;
+    color: #970101;
 }
 .breadcrumbs{
     background-color: #970101 !important;
