@@ -213,3 +213,7 @@ def Respuestas(request) :
 
 def entradasAdmin(request) :
     return render(request,'entradas-admin.html')
+
+class Votacion(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'votacion.html')

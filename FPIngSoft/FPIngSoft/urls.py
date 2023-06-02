@@ -37,7 +37,7 @@ urlpatterns = [
     #path('home/', Home.as_view(), name='home'),
     #path('home/<int:c_tipo_platillo>/', redir_seccion),
     #path('home/<int:platillo>/', vista_platillo),
-    #path('votacion/', Votacion.as_view(), name='votacion'),
+    path('votacion/', Votacion.as_view(), name='votacion'),
     #path('votacion/resultados', VotacionResult.as_view(), name='votacion'),
     #path('votacion/respuestas', VotacionResp.as_view(), name='votacion'),
     path('carrito/', Carrito.as_view(), name='carrito'),
