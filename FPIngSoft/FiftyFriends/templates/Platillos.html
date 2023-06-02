@@ -26,8 +26,12 @@
     <p class="card-text2 overflow-auto texto-card">
         $ {{ platillo.precio }}
     </p>
+    <!--
     <a type="button" 
+       class="btn btn-primary btn-lg">Añadir al carrito +</a> -->
+    <a type="button" href="{% url 'agregarPlatillo' platillo.id_tipo_platillo.descripcion platillo.id_platillo platillo.id_platillo%}"
        class="btn btn-primary btn-lg">Añadir al carrito +</a>
     <button type="button" class="btn btn-secondary btn-lg"> Cancelar -</button>
    </div>
+   
 {% endblock content %}
