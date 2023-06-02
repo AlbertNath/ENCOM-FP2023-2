@@ -5,7 +5,7 @@
 .Imagen {
     width: 70px;
     height: 70px;
-    top: -2.5em;
+    top: -4.5em;
     left: 40px;
     position: relative;
     z-index: 1;
@@ -13,13 +13,13 @@
 .ImagenUno {
     width: 300px;
     height: 300px;
-    top: -8em;
-    left: 229px;
+    top: -17em;
+    left: 147px;
     position: relative;
     z-index: 1;
-}
+  }
 
-.btn-secondary {
+  .btn-secondary {
     background-color: #FFD494;
     box-sizing: border-box;
     border: 1.5px solid #970101;
@@ -37,10 +37,10 @@
     position: relative;
     left: 58.98%;
     right: 35.18%;
-    top: -23em;
+    top: -39em;
     bottom: 25.41%;
     color: #970101;
-}
+  }
   
 
 .btn-primary {
@@ -61,7 +61,7 @@
     position: relative;
     left: 48.98%;
     right: 35.18%;
-    top: -23em;
+    top: -39em;
     bottom: 25.41%;
     color: white;
 }
@@ -91,7 +91,7 @@ p.Contenido {
     width: 150px;
     height: 50px;
     left: 480px;
-    top: -11em;
+    top: -24em;
 }
 
 p.Contenido2 {
@@ -99,7 +99,7 @@ p.Contenido2 {
     width: 80px;
     height: 50px;
     left: 480px;
-    top: -17em;
+    top: -29em;
 }
 
 p.Contenido3 {
@@ -107,7 +107,7 @@ p.Contenido3 {
     width: 550px;
     height: 30px;
     left: 480px;
-    top: -23em;
+    top: -35em;
 }
 .card-text {
     font-family: 'Roboto', cursive;
@@ -115,9 +115,9 @@ p.Contenido3 {
     width: 450px;
     height: 110px;
     left: 480px;
-    top: -13em;
+    top: -25em;
     color: #63574f;
-  }
+}
 
 .card-text2 {
     font-family: 'Roboto', cursive;
@@ -125,7 +125,7 @@ p.Contenido3 {
     width: 200px;
     height: 30px;
     left: 570px;
-    top: -20em;
+    top: -32em;
     color: #63574f;
 }
 
@@ -136,7 +136,7 @@ p.Contenido3 {
     width: 350px;
     height: 20px;
     left: 600px;
-    top: -25em;
+    top: -37em;
     color: #63574f;
 }
 
