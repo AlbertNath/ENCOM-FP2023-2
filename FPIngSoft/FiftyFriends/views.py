@@ -196,7 +196,6 @@ def inicio(request):
 def modoAdmin(request) :
     return render(request, 'ModoAdmin.html', {})
 
-
 def EleUsuario(request) :
     return render(request, 'EleUsuario.html', {})
 
@@ -206,14 +205,10 @@ def ModoResTableta(request) :
 def platillos(request) :
     return render(request, 'Platillos.html', {})
 
-def Modplatillos(request) :
-    return render(request, 'ModPlatillos.html', {})
 
 def Respuestas(request) :
     return render(request, 'Respuestas.html', {})
 
-def entradasAdmin(request) :
-    return render(request,'entradas-admin.html')
 
 class Votacion(View):
     def get(self, request, *args, **kwargs):
