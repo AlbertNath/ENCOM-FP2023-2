@@ -1,4 +1,3 @@
-
 h1.Titulo {
   font-family: 'Sigmar One';
   font-style: normal;
@@ -6,12 +5,27 @@ h1.Titulo {
   line-height: 30px;
   top: 3.5em;
   text-align: center;
-  position: absolute;
+  position: relative;
   width: 450px;
   height: 50px;
-  left: 460px;
+  left: -2em;
   top: 150px;
 }
+
+h3.SubTitulo {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 16px;
+  text-align: center;
+  position: relative;
+  width: 450px;
+  height: 40px;
+  left: -4em;
+  top: 185px;
+}
+
 h3.SubTitulo2 {
   font-family: 'Roboto';
   font-style: normal;
@@ -22,39 +36,26 @@ h3.SubTitulo2 {
   position: absolute;
   width: 450px;
   height: 240px;
-  left: 450px;
-  top: 250px;
-}
-h3.SubTitulo {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 16px;
-  text-align: center;
-  position: absolute;
-  width: 450px;
-  height: 240px;
-  left: 420px;
-  top: 220px;
+  left: 15.5em;
+  top: 274px;
 }
 
 .col-sm-10 {
   width: 300px;
   border-radius: 5px;
-  position: absolute;
-  left: 52.81%;
+  position: relative;
+  left: -1.5em;
   right: 35.18%;
-  top: 52.62%;
+  top: 13.3em;
   bottom: 25.41%;
 }
 .col-sm-11 {
   width: 300px;
   border-radius: 5px;
-  position: absolute;
-  left: 52.81%;
+  position: relative;
+  left: -1.5em;
   right: 35.18%;
-  top: 68.80%;
+  top: 13.5em;
   bottom: 25.41%;
   height: 18%;
 }
@@ -72,7 +73,7 @@ img.ImagenUno {
 img.ImagenDos {
   width: 60px;
   height: 60px;
-  top: 13.8em;
+  top: 9.8em;
   left: -28px;
   position: relative;
   z-index: 1;
@@ -81,8 +82,8 @@ img.ImagenDos {
 img.ImagenTres {
   width: 60px;
   height: 50px;
-  top: 14.6em;
-  left: -28px;
+  top: 10.2em;
+  left: -25px;
   position: relative;
   z-index: 1;
 }
@@ -101,9 +102,9 @@ img.ImagenTres {
   font-size: 24px;
   line-height: 16px;
   border-radius: 15px;
-  position: absolute;
-  left: 57.98%;
+  position: relative;
+  left: 25.98%;
   right: 35.18%;
-  top: 82.62%;
+  top: 367.62%;
   bottom: 25.41%;
 }
