@@ -5,26 +5,26 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/usuario.css' %}"> 
 {% endblock htmlhead %}
 {% block content %}  
-    <div class="container-fluid" style="padding-bottom: 50px;">
-
-        <div class="container-sm">
+    <div class="container-sm">
             <img class="ImagenUno" src="{% static 'img/50Amigos2.png' %}" alt=""> 
-            <div class="container-sm" style="text-align: center;">
-                <h1 class="Titulo"> Bienvenido </h1>             
-                <img class="img-fluid" src=" {% static 'img/LogoChef.png' %}" alt="" style="width: 300px;">
-            </div>  
-        </div>
-
-        <div class="container-sm" style="text-align: center;">
-            <h3 class="SubTitulo"> Seleccione un modo de usuario</h3>   
-            <img class="img-fluid" src="{% static 'img/Libreta.png' %}"  alt="" style="width: 70px;">
+            </div> 
+            <div class="row">
+            <h1 class="Titulo"  > BienvEnido </h1>             
+                <img class="ImagenDos" src=" {% static 'img/LogoChef.png' %}" alt="">  
+            </div>
+            <br> 
+            <div class="row">
+            <h3 class="SubTitulo"> Seleccione un modo de usuario</h3>    
+        <div class="row">  
+                <img class="ImagenTres" src="{% static 'img/Libreta.png' %}"  alt="">
             <button type="button" onclick="location.href = '{% url 'admin:index' %}'" class="btn btn-primary btn-lg">Administrador</button>
-        </div><br>
-
-        <div class="container-sm" style="text-align: center;">
-            <img class="img-fluid" src="{% static 'img/Tableta.png' %}" alt="" style="width: 70px;">
-            <button type="button" onclick="location.href = '{% url 'ModoResTableta' %}'" class="btn btn-primary btn-lg"> Responsable  de Tableta</button>
+        </div> 
+        <div class="row"> 
+                <img class="ImagenCuatro"  src="{% static 'img/Tableta.png' %}" alt="">
+                <button type="button" onclick="location.href = '{% url 'ModoResTableta' %}'" class="btn btn-secondary btn-lg"> Responsable  de Tableta</button>
         </div>
+            <!--
+            <a href="#" class="btnUno">Administrador</a>
+            <a href="#" class="btnDos">Tipo de Usuario</a> -->
     </div>
-
     {% endblock content %}

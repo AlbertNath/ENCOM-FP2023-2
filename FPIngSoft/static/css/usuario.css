@@ -2,12 +2,20 @@
     background: #970101;
     border-radius: 15px;
     height: 70px;
-    width: 200px;
+    width: 190px;
+    left: 262px;
+    top: 313px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 24px;
+    line-height: 16px;
     border-radius: 15px;
+    position: relative;
+    left: 38.81%;
+    right: 35.18%;
+    top: -111.38%;
+    bottom: 25.41%;
 }
 
 .btn-secondary {
@@ -35,15 +43,23 @@ h1.Titulo {
     font-family: 'Sigmar One';
     font-style: normal;
     font-size: 95px;
-}
+    line-height: 16px;
+    position: relative;
+    top: -1em;
+    left: 280px;
+  }
 
 h3.SubTitulo {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 45px;
+    line-height: 16px;
     text-align: center;
+    left: 30px;
+    top: -2.5em;
     border-radius: 0px;
+    position: relative;
 }
   
 /*Imagenes*/
@@ -51,7 +67,9 @@ h3.SubTitulo {
 img.ImagenUno {
     width: 200px;
     height: 170px;
-    margin-top: 30px;
+    top: 0.5em;
+    left: -30px;
+    position: relative;
     z-index: 1;
 }
 
@@ -67,6 +85,9 @@ img.ImagenDos {
 img.ImagenTres {
     width: 80px;
     height: 80px;
+    top: -6em;
+    left: 400px;
+    position: relative;
     z-index: 1;
 }
 
