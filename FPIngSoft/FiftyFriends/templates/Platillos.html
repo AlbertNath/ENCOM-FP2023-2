@@ -31,7 +31,7 @@
        class="btn btn-primary btn-lg">Añadir al carrito +</a> -->
     <a type="button" href="{% url 'agregarPlatillo' platillo.id_tipo_platillo.descripcion platillo.id_platillo platillo.id_platillo%}"
        class="btn btn-primary btn-lg">Añadir al carrito +</a>
-    <button type="button" class="btn btn-secondary btn-lg"> Cancelar -</button>
+    <button type="button" class="btn btn-secondary btn-lg" onclick="location.href = '..'"> Atrás </button>
    </div>
    
 {% endblock content %}

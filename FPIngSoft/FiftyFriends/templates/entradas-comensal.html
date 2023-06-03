@@ -37,7 +37,7 @@
                         <img src="{{ p.imagen }}" class="card-img-top img-card" alt="...">
                         <div class="card-body" style="background-color: #e9981fcd;">
                             <h5 class="card-title">{{ p.descrpcion }}</h5>
-                            <p>{{ p.precio }}"</p>
+                            <p>${{ p.precio }}</p>
                             <div class="container-sm" style="text-align: right;">
                                <a href="{% url 'verPlatillo' p.id_tipo_platillo p.id_platillo %}" class="btn card-btn">Ver platillo</a>
                             </div>
