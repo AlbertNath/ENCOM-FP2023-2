@@ -8,7 +8,15 @@ Integrantes :
 -Preciado Márquez David Salvador 421091670
 -Vargas Bravo Paola  318074755
 ******************************************
-             EJECUCIÓN
+               REQUISITOS
+******************************************
+Para poder ejecutar el proyecto, será
+necesario tener instalado Django v4.1
+
+Referirse al manual de instalación en:
+https://www.djangoproject.com/download/
+******************************************
+                EJECUCIÓN
 ******************************************
 Para correr el proyecto, situarse en la
 carpeta `ÈNCOMFP2023-2/FPIngSoft/` y
