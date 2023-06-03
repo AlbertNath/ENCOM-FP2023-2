@@ -8,81 +8,37 @@ from .models import administrador, c_ubicacion, orden, platillo, c_tipo_platillo
 from .forms import AdministradorForm, PlatilloForm, NameForm
 
 # ========== Login =========
+def loggin_init(request):
+    """
+    Función que regresa la vista inicial
+    para autenticarse como admin o ingresar
+    los datos de la mesa y ubicación.
+    """
+    return render(request, 'EleUsuario.html', {})
 
-def getLoggin(request, *args, **kwargs):
-    return render(request, 'login.html')
-
-# Esto quizás debería ir por separado?
-def iniciarSecion(request, nombre_usuario,contrasenia, template_name='books_pc_multi_view2/login.html'):
-    admin = get_object_or_404(administrador, nombre_usuario = nombre_usuario ,contrasenia = contrasenia)
-    ctx = {
-        'admin': admin,
-    }
-    return render(request, template_name, ctx)
+def inicio(request):
+    """
+    Función utilitaria para redirigir a la vista de
+    inicio.
+    """
+    return render(request, 'Inicio.html', {})
 
 # ========== platillo CRUD=========3
 def get_platillos() -> QuerySet:
+    """
+    Función utilitaria para recuperar todos los platillos
+    de una orden dada.
+    """
     orden_act = orden.objects.filter(id_orden=1)[0]
     return orden_act.id_platillos.all()
 
-def getPlatillos(self, request, *args, **kwargs):
-    todos_los_platillos = platillo.objects.all()
-    ctxt = {
-        'platillos_totales': todos_los_platillos
-    }
-    return render(request, 'home.html', ctxt)
-
-def verPlatillo(self, request, id_platillo, template_name='books_pc_multi_view2/platillo_view.html'):
-    platillo = get_object_or_404(platillo, id_platillo=id_platillo)
-    ctx = {
-        'platillo': platillo
-    }
-    return render(request, template_name, ctx)
-
-# Estaría mejor dejarlas fuera(?)
-def getSeccion(request, c_tipo_platillo, template_name='books_pc_multi_view2/platillo_view.html'):
-    id_tipo_platillo = get_object_or_404(platillo, c_tipo_platillo=c_tipo_platillo)
-    platillos = get_object_or_404(platillo, id_tipo_platillo=id_tipo_platillo)
-    ctx = {
-        'platillos': platillos
-    }
-    return render(request, template_name, ctx)
-
-def agregarPlatillo(request, template_name='books_pc_multi_view2/platillo_form.html'):
-    form = PlatilloForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('FiftyFriends:home')
-    ctx = {
-        'form': form,
-    }
-    return render(request, template_name, ctx)
-
-def editarPlatillo(request, pk, template_name='books_pc_multi_view2/platillo_form.html'):
-    platillo = get_object_or_404(platillo, id_platillo=id_platillo)
-    form = BookForm(request.POST or None, instance=book)
-    if form.is_valid():
-        form.save()
-        return redirect('FiftyFriends:home')
-    ctx = {
-        'form': form,
-        'platillo': platillo,
-    }
-    return render(request, template_name, ctx)
-
-def eliminarPlatillo(request, pk, template_name='books_pc_multi_view2platillo_form.html'):
-    platillo = get_object_or_404(platillo, id_platillo=id_platillo)
-    if request.method=='POST':
-        platillo.delete()
-        return redirect('FiftyFriends:home')
-    ctx = {
-        'object': book,
-        'platillo': platillo,
-    }
-    return render(request, template_name, ctx)
-
 class Carrito(View):
+    """
+    Clase tipo vista para representar la
+    lógica del carrito (orden).
+    """
     def get(self, request, *args, **kwargs):
+        """Método correspondiente a una request GET"""
         platillos = get_platillos()
         total = 0.0
         for i in platillos:
@@ -96,7 +52,7 @@ class Carrito(View):
         return render(request, 'carrito.html', ctxt)
 
     def post(self, request, *args, **kwargs):
-        print('POST request reached')
+        """Método correspondiente a una request POST"""
         form = NameForm(request.POST)
 
         cantidades = request.POST.getlist('cantidad[]')
@@ -119,6 +75,7 @@ class Carrito(View):
         return render(request, 'carrito.html', ctxt)
 
     def agregar_platillo(request, cat, id_c, id_p):
+        """Método utilitario para agregar un platillo al carrito."""
         carrito = orden.objects.filter(id_orden=1)[0]
         p = platillo.objects.filter(id_platillo=id_p).get()
 
@@ -126,65 +83,90 @@ class Carrito(View):
         return redirect('carrito')
 
     def eliminar_platillo(request, id):
+        """Método utilitario para eliminar un platillo al carrito."""
         carrito = orden.objects.filter(id_orden=1)[0]
         p = platillo.objects.filter(id_platillo=int(id))
         carrito.id_platillos.remove(p[0].id_platillo)
 
         return redirect('carrito')
 
-
-
 class Menu(View):
+    """
+    Clase tipo vista para representar la
+    lógica del menú.
+    """
     def get(self, request, *args, **kwargs):
+        """Método correspondiente a una request GET"""
         ctxt = {
             'platillos': platillo.objects.all()
         }
         return render(request, 'entradas-comensal.html', ctxt)
 
     def get_platillos_categoria(self, cat):
+        """
+        Método utilitario para devolver todos los platillos de una
+        categoría dada.
+        """
         id_cat = c_tipo_platillo.objects.filter(descripcion=cat).get()
         return platillo.objects.filter(id_tipo_platillo=id_cat.id_tipo_platillo)
 
-def categoria(request, cat):
-    m = Menu()
-    match cat:
-        case 'Entrada':
-            platillos = m.get_platillos_categoria(cat)
-            return render(request, 'entradas-comensal.html', {'platillos': platillos})
-        case 'Principal':
-            platillos = m.get_platillos_categoria(cat)
-            return render(request, 'principales-comensal.html', {'platillos': platillos})
-        case 'Bebida':
-            platillos = m.get_platillos_categoria(cat)
-            return render(request, 'bebidas-comensal.html', {'platillos': platillos})
-        case 'Helado':
-            platillos = m.get_platillos_categoria(cat)
-            return render(request, 'helados-comensal.html', {'platillos': platillos})
+    def categoria(request, cat):
+        """
+        Método utilitario para devolver la vista correspondiente en
+        función del request.
+        """
+        m = Menu()
+        match cat:
+            case 'Entrada':
+                platillos = m.get_platillos_categoria(cat)
+                return render(request, 'entradas-comensal.html', {'platillos': platillos})
+            case 'Principal':
+                platillos = m.get_platillos_categoria(cat)
+                return render(request, 'principales-comensal.html', {'platillos': platillos})
+            case 'Bebida':
+                platillos = m.get_platillos_categoria(cat)
+                return render(request, 'bebidas-comensal.html', {'platillos': platillos})
+            case 'Helado':
+                platillos = m.get_platillos_categoria(cat)
+                return render(request, 'helados-comensal.html', {'platillos': platillos})
 
-    return redirect('..')
+        return redirect('..')
 
-def get_platillo(request, cat, id_p, *args, **kwargs):
-    p = platillo.objects.filter(id_platillo=id_p).get()
+    def get_platillo(request, cat, id_p, *args, **kwargs):
+        """Método para regresar la vista individual de un platillo."""
+        p = platillo.objects.filter(id_platillo=id_p).get()
 
-    ctxt = {'platillo': p}
-    return render(request, 'Platillos.html', ctxt)
+        ctxt = {'platillo': p}
+        return render(request, 'Platillos.html', ctxt)
 
 
 class LogginRespTab(View):
+    """
+    Clase tipo vista para representar la
+    lógica del menú.
+    """
     def get(self, request):
+        """Método correspondiente a una request GET"""
         return render(request, 'ModoResTableta.html')
 
     def post(self, request):
+        """Método correspondiente a una request POST"""
         correo = request.POST['correoRes']
         psswrd = request.POST['contraseña']
         return redirect('ubicacion')
 
 class Ubicacion(View):
+    """
+    Clase tipo vista para representar la
+    lógica de las ubicaciones.
+    """
     def get(self, request):
+        """Método correspondiente a una request GET"""
         ubicaciones = c_ubicacion.objects.all()
         return render(request, 'UbicacionMesa.html', {'ubicaciones': ubicaciones})
 
     def post(self, request, *args, **kwargs):
+        """Método correspondiente a una request POST"""
         form = NameForm(request.POST)
         print('POST request reached')
         mesas = request.POST.get('mesas')
@@ -194,34 +176,13 @@ class Ubicacion(View):
             return redirect('inicio')
         return redirect('ubicacion')
 
-def loggin_init(request):
-    return render(request, 'EleUsuario.html', {})
-
-def inicio(request):
-    return render(request, 'Inicio.html', {})
-#Para probar y ver las vistas
-def modoAdmin(request) :
-    return render(request, 'ModoAdmin.html', {})
-
-def EleUsuario(request) :
-    return render(request, 'EleUsuario.html', {})
-
-def ModoResTableta(request) :
-    return render(request, 'ModoResTableta.html', {})
-
-def platillos(request) :
-    return render(request, 'Platillos.html', {})
-
-
-def Respuestas(request) :
-    return render(request, 'Respuestas.html', {})
-
-
 class Votacion(View):
+    """
+    Clase tipo vista para representar la
+    lógica de la votación de helado.
+    """
     def get(self, request, *args, **kwargs):
-        return render(request, 'votacion.html')
-class Votacion(View):
-    def get(self, request, *args, **kwargs):
+        """Método correspondiente a una request GET"""
         votacion.objects.all().delete()
         sabores = platillo.objects.filter(id_tipo_platillo=4)
         ctxt = {
@@ -229,10 +190,10 @@ class Votacion(View):
         }
 
         return render(request, 'votacion.html',ctxt)
-    
    
         
     def post(self, request, *args, **kwargs):
+        """Método correspondiente a una request POST"""
         print('POST request reached')
         form = NameForm(request.POST)
 
@@ -252,6 +213,7 @@ class Votacion(View):
         return render(request, 'votacion.html',ctxt)
 
     def termina_voto(request):
+        """Método para terminar la votación."""
         explicacion = votacion.objects.values('helado').order_by('helado').annotate(count=Count('helado')).order_by('-count')
         ganador = explicacion.first()
         ctxt = {
