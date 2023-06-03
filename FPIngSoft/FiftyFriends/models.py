@@ -1,5 +1,4 @@
 from django.db import models
-from typing import Dict
 
 class administrador(models.Model):
     """Modelo para representar a un administrador."""
